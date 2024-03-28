@@ -175,7 +175,7 @@ contract NFTMarketplace is ERC721 {
      }
 
      //SINGULE USER ITEMS
-     function fetchItemsListed() public view return(MarketItem[] memory) {
+     function fetchItemsListed() public view returns(MarketItem[] memory) {
         uint256 totalCount = _tokenIds.current();
         uint256 itemCount = 0;
         uint256 currentIndex = 0;
@@ -194,6 +194,6 @@ contract NFTMarketplace is ERC721 {
                 currentIndex += 1;
                 }
             }
-            returns items;
+            return items;
      }    
 }
