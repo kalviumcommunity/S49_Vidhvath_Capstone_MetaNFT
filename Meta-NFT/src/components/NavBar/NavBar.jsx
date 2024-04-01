@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useClient } from 'next/data-client';
+
+
+
 
 //IMPORT ICON
 import {MdNotifications} from 'react-icons/md';
@@ -13,6 +13,7 @@ import {CgMenuLeft, CgMenuRight} from "react-icons/cg";
 import Style from "./NavBar.module.css";
 import { Discover, HelpCenter, Notification, Profile, SideBar } from './index';
 import { Button } from "../componentindex";
+
 import images from "../../img";
 
 const NavBar = () => {
@@ -21,8 +22,9 @@ const NavBar = () => {
   const [help, setHelp] = useState(false);
   const [notification, setNotification] = useState(false);
   const [profile, setProfile] = useState(false);
-  const [first, setFirst] = useState(second)
+  const [first, setFirst] = useState(true)
   const [openSideMenu, setOpenSideMenu] = useState(false);
+
 
 const openMenu = (e)=> {
   const btnText = e.target.innerText;
@@ -84,7 +86,7 @@ const OpenSideBar =()=> {
       <div className={Style.navbar_container}>
         <div className={Style.navbar_container_left}>
           <div className={Style.logo}>
-            <Image src={images.logo} alt="NFT MARKET PLACE" width={100} height={100}/>
+            <img src={images.logo1} alt="NFT MARKET PLACE"  width={100} height={100}/>
           </div>
           <div className={Style.navbar_container_left_box_input}>
             <div className={Style.navbar_container_left_box_input_box}>
@@ -136,7 +138,7 @@ const OpenSideBar =()=> {
           {/* USER PROFILE */} 
           <div className={Style.navbar_container_right_profile_box}>
             <div className={Style.navbar_container_right_profile}>
-              <Image src={images.user1} alt="Profile" width={40} height={40} onClick={()=> openProfile()}
+              <img src={images.user1} alt="Profile" width={40} height={40} onClick={()=> openProfile()}
               className={Style.navbar_container_right_profile}
                 />
                 {profile && <Profile />}
