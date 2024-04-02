@@ -23,8 +23,34 @@ export const Discover = () => {
       name: "Author Profile",
       link: "author-profile"
     },
-  ]
+    {
+      name: "NFT Details",
+      link: "NFT-details"
+    },
+    {
+      name: "Account Setting",
+      link: "account-setting"
+    },
+    {
+      name: "Connect Wallet",
+      link: "connect-wallet"
+    },
+    {
+      name: "Blog",
+      link: "blog"
+    },
+  ];
   return (
-    <div>Discover</div>
-  )
-}
+    <div className={Style.box}>
+       <select style={{ border: 'none' }}>
+      {discover.map((el, i) => (
+           <option>{el.name}</option>
+       
+      ))}
+      </select>
+    </div>
+    
+    
+  );
+;}
+
