@@ -72,7 +72,7 @@ const openProfile = () => {
   }
 };
 
-const OpenSideBar =()=> {
+const openSideBar =()=> {
   if (!openSideMenu) {
     setOpenSideMenu(true);
     } else {
@@ -144,6 +144,7 @@ const OpenSideBar =()=> {
                 {profile && <Profile />}
             </div>
 
+
           </div>
 
           {/* MENU BUTTON */}
@@ -159,7 +160,7 @@ const OpenSideBar =()=> {
           {
           openSideMenu && (
           <div className={Style.SideBar}>
-            <Sidebar setOpenSideMenu={setOpenSideMenu}/>
+            <SideBar setOpenSideMenu={setOpenSideMenu}/>
             </div>
         )
       }
