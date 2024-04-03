@@ -2,6 +2,7 @@ import React from 'react'
 import {FaUserAlt, FaRegImage, FaUserEdit} from 'react-icons/fa';
 import {MdHelpCenter } from "react-icons/md";
 import { TbDownloadOff, TbDownload } from "react-icons/tb";
+import { Link } from 'react-router-dom';
 
 //INTERNAL IMPORT
 import Style from './Profile.module.css';
@@ -23,19 +24,19 @@ const Profile = () => {
         <div className={Style.profile_menu_one_item}>
           <FaUserAlt/>
           <p>
-            <link href={{pathaname: '/myprofile'}}> My Profile</link>
+            <Link to={{pathaname: '/myprofile'}}> My Profile</Link>
           </p>
           </div>
           <div className={Style.profile_menu_one_item}>
           <FaRegImage/>
           <p>
-            <link href={{pathaname: '/my-items'}}> My Item</link>
+            <Link to={{pathaname: '/my-items'}}> My Item</Link>
           </p>
           </div>
           <div className={Style.profile_menu_one_item}>
           <FaUserEdit/>
           <p>
-            <link href={{pathaname: '/edit-profile'}}> Edit Profile</link>
+            <Link to={{pathaname: '/edit-profile'}}> Edit Profile</Link>
           </p>
           </div>
         </div>
@@ -44,13 +45,13 @@ const Profile = () => {
           <div className={Style.profile_menu_one_item}>
             <MdHelpCenter/>
             <p>
-              <link href={{ pathname: "/help" }}>Help</link>
+              <Link to={{ pathname: "/help" }}>Help</Link>
             </p>
           </div>
           <div className={Style.profile_menu_one_item}>
             <TbDownload />
             <p>
-              <link href={{ pathname: "/disconnect"}}>Disconnect</link>
+              <Link to={{ pathname: "/disconnect"}}>Disconnect</Link>
             </p>
           </div>
         </div>
