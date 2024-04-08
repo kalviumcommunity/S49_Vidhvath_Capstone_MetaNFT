@@ -8,13 +8,14 @@ import Style from './SideBar.module.css';
 
 import images from '../../../img';
 import Button from "../../Button/Button";
+import { Link } from "react-router-dom";
 
 
 const SideBar = ({setOpenSideMenu}) => {
   //-------USESTATE
   const [openDiscover, setOpenDiscover] = useState(false);
   const [openHelp, setOpenHelp] = useState(false);
-
+  
 
 //-----------------DISCOVER NAVIGATION MENU
   const discover = [
@@ -119,6 +120,7 @@ const closeSideBar = ()=> {
         <div>
           <div className={Style.sideBar_menu_box} onClick ={()=> openDiscoverMenu()} >
             <p>Discover</p>
+            
             <TiArrowSortedDown/>
 
           </div>
@@ -128,7 +130,8 @@ const closeSideBar = ()=> {
               <div className={Style.sideBar_discover}>
                 {discover.map((el, i) => (
                   <p key={i + 1}>
-                    <link  href={{pathname: `${el.link}` }}>{el.name}</link>
+                    <Link to={`/${el.link}`}>{el.name}</Link>
+                    {/* <link  href={{pathname: `${el.link}` }}>{el.name}</link> */}
                   </p>
                 ))}
               </div>
@@ -139,7 +142,7 @@ const closeSideBar = ()=> {
         <div className={Style.sideBar_menu_box} onClick={()=> openHelpMenu()}>
 
           <p>Help Center</p>
-          <TiArrowSortedUp/>
+          <TiArrowSortedDown/>
         </div>
 
         {
@@ -147,7 +150,8 @@ const closeSideBar = ()=> {
             <div className={Style.sideBar_discover}>
               {helpCenter.map((el, i)=> (
                 <p key={i + 1}>
-                  <link  href={{ pathname: `${el.link}` }}>{el.name}</link> 
+                  <Link to={`/${el.link}`}>{el.name}</Link>
+                  {/* <link  href={{ pathname: `${el.link}` }}>{el.name}</link>  */}
 
                 </p>
               ))}
@@ -157,8 +161,8 @@ const closeSideBar = ()=> {
       </div>
 
       <div className={Style.sideBar_button}>
-        <Button btnName = "Create"/>
-        <Button btnName = "Connect Wallet"/>
+        <Button btnName = "Create" handleClick={() => {}}/>
+        <Button btnName = "Connect Wallet" handleClick={()=> {}}/>
       </div>
     </div>
   );
