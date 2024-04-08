@@ -1,0 +1,10 @@
+.helpCenter{
+    padding: .5rem 1rem;
+    transition: all .3s ease-in;
+}
+
+.helpCenter :hover{
+    background-color: #4c5773;
+    color: darkgray;
+    border-radius: .3rem;
+}

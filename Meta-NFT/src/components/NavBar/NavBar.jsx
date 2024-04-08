@@ -2,8 +2,6 @@ import React from 'react';
 import { useState }  from "react";
 
 
-
-
 //IMPORT ICON
 import {MdNotifications} from 'react-icons/md';
 import {BsSearch} from "react-icons/bs";
@@ -112,7 +110,7 @@ const openSideBar =()=> {
 
           {/* HELP CENTER MENU */}
           <div className={Style.navbar_container_right_help}>
-            <p onClick={(e) => openMenu(e)}>Help Center</p>
+            <p onClick={(e) => openMenu(e)} style={{width:"100px"}}>Help Center</p>
             {help && (
               <div className={Style.navbar_container_right_help_box}>
                 <HelpCenter />
@@ -132,7 +130,7 @@ const openSideBar =()=> {
 
           {/* CREATE BUTTON SECTION */}
           <div className={Style.navbar_container_right_button}>
-          <Button btnText="Create"/>
+          <Button btnText="Create" handleClick={() => {}}/>
           </div>   
 
           {/* USER PROFILE */} 
@@ -158,6 +156,7 @@ const openSideBar =()=> {
           
           {/*SIDEBAR COMPONENT*/ }
           {
+          
           openSideMenu && (
           <div className={Style.SideBar}>
             <SideBar setOpenSideMenu={setOpenSideMenu}/>

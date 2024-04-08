@@ -6,7 +6,7 @@
   --icons-light-colour: #4c577341;
   --icons-bg-colour: #e2e6e9;
   --shadow-dark-colour: #d3dae7;
-  --main-bg-color:3ecf0f3;
+  --main-bg-color:#3ecf0f3;
   --box-shadow: 1rem 1rem 1rem var(var(--shadow-dark-color), -1rem -1rem 1rem var(var(--shadow-dark-colour)));
   --box-shadow-2: 0rem 0rem 0rem var(var(--shadow-dark-color),-.3rem -.3rem 1rem var(var(--shadow-dark-colour)));
 }
@@ -25,7 +25,7 @@ a {
 
 
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
   -webkit-tap-highlight-color:  none;
 
 }
