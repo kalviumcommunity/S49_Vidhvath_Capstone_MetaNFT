@@ -1,76 +1,71 @@
-.notification{
+.notification {
     position: absolute;
     padding: 2rem 1rem;
-    box-shadow: darkgrey;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     font-size: 1rem;
     width: 25rem;
     border-radius: 1rem;
-
     left: -20rem;
     top: 3.5rem;
     z-index: 222222222;
-    /* background-color: var(--main-bg-color); */
-    
-    background-color: #4158D0;
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-
+    background-color: #131722; /* Dark background */
+    color: #ffffff; /* White text */
 }
+
 .notification > p {
     font-size: 1.3rem;
     font-weight: 600;
     margin-bottom: 2rem;
 }
 
-.notification_box{
+.notification_box {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
     padding: 1rem;
-    transition: all .3s ease-in;
+    transition: all 0.3s ease-in;
+    background-color: #131722; /* Dark background */
+    color: #ffffff; /* White text */
+    border-radius: 0.3rem;
 }
 
-.notification_box:hover{
-    /* background-color: black; */
-    background-color: #D9AFD9;
-background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
-
-    color:purple;
-    border-radius: .3rem;
+.notification_box:hover {
+    background-color: #1d2733; /* Darker background on hover */
+    color: #f0f0f0; /* Lighter text on hover */
 }
 
-.notification_box_img{
-    border-radius: .5rem;
+.notification_box_img {
+    border-radius: 0.5rem;
 }
 
-.notification_box_info{
+.notification_box_info {
     line-height: 0;
-    margin-top: -.8rem;
+    margin-top: -0.8rem;
 }
-.notification_box_info h4{
+
+.notification_box_info h4 {
     font-weight: 600;
 }
 
-.notification_box_info p{
+.notification_box_info p {
     font-size: 15px;
-    line-height: .3;
+    line-height: 0.3;
     position: relative;
 }
-.notification_box_new{
-    width: .5rem;
-    height: .5rem;
-    border-radius: 50%;
-    background-color: aqua;
 
+.notification_box_new {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #e63946; /* Red color for indicator */
 }
 
 @media screen and (max-width: 35em) {
-    .notification{
+    .notification {
         width: 20rem;
         left: -15rem;
     }
-    .notification_box p{
+    .notification_box p {
         font-size: 12px;
-
     }
-    
 }

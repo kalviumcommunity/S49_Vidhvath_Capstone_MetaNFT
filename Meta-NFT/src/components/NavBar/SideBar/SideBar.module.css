@@ -1,63 +1,68 @@
-.sideBar_box{
-    padding: auto;
+.sideBar_box {
+    padding: 1rem; /* Adjust padding as needed */
     border-bottom: 1px solid #4c5773;
-    background-color:darkgrey;
+    background-color: #2c3e50; /* Darker background */
 }
 
-.sideBar_closeBtn{
+.sideBar_closeBtn {
     position: absolute;
-    top: 3rem;
-    right: 2rem;
-    transition: all .2s ease-in-out;
+    top: 1rem; /* Adjust top position as needed */
+    right: 1rem; /* Adjust right position as needed */
+    transition: all 0.2s ease-in-out;
     cursor: pointer;
-    box-shadow: darkgray;
 }
 
-.sideBar_closeBtn:hover{
+.sideBar_closeBtn:hover {
     transform: rotate(45deg);
 }
-.sideBar_box p{
-    margin-top: -2rem;
 
+.sideBar_box p {
+    margin-top: -1rem; /* Adjust margin-top as needed */
+    color: #ffffff; /* White text */
 }
-.sideBar_social{
+
+.sideBar_social {
     display: flex;
-    gap: 1.3rem;
+    gap: 1rem; /* Adjust gap as needed */
     font-size: 1.5rem;
-    align-items: ceter;
+    align-items: center; /* Corrected typo */
 }
-.sideBar_social a{
-    padding: .2rem;
+
+.sideBar_social a {
+    padding: 0.2rem;
     border-radius: 50%;
-    transition: all .3s ease-in;
+    transition: all 0.3s ease-in;
     display: grid;
 }
 
-.sideBar_social a:hover{
+.sideBar_social a:hover {
     background-color: #4c5773;
-    color: darkgrey;
-    box-shadow: 1px solid #4c5773;
+    color: #2c3e50; /* Darker background color */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
-.sideBar_menu{
-    padding: 2rem;
+
+.sideBar_menu {
+    padding: 1rem 2rem; /* Adjust padding as needed */
     text-transform: uppercase;
     font-weight: 500;
     border-radius: 1px solid #4c5773;
+    background-color: #34495e; /* Dark background */
+    color: #ffffff; /* White text */
 }
 
-.sideBar_menu_box{
+.sideBar_menu_box {
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
 }
 
-.sideBar_discover{
+.sideBar_discover {
     padding-inline: 1rem;
 }
 
-.sideBar_button{
-    padding: 2rem;
+.sideBar_button {
+    padding: 1rem 2rem; /* Adjust padding as needed */
     display: flex;
     align-items: center;
     justify-content: space-between;
