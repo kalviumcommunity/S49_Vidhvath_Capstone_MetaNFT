@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { NavBar, Footer } from './components/componentindex'
 import Style from "./styles/index.module.css";
-import { HeroSection, Service, BigNFTSlider } from './components/componentindex';
+import { HeroSection, Service, BigNFTSlider, Subscribe } from './components/componentindex';
 
 const MyApp =() => {
 
@@ -13,6 +13,7 @@ const MyApp =() => {
       <HeroSection />
       <Service/>
       <BigNFTSlider/>
+      <Subscribe/>
    </div>
     
    <Footer/>
