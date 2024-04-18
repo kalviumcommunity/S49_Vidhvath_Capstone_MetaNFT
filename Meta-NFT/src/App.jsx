@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { NavBar, Footer } from './components/componentindex'
 import Style from "./styles/index.module.css";
-import { HeroSection, Service, BigNFTSlider, Subscribe, Title } from './components/componentindex';
+import { HeroSection, Service, BigNFTSlider, Subscribe, Title, Category } from './components/componentindex';
 
 const MyApp =() => {
 
@@ -14,7 +14,7 @@ const MyApp =() => {
       <Service/>
       <BigNFTSlider/>
       <Title heading="Browse by category" paragraph="Explore the NFTs in the most featured categories. "/>
-
+      <Category/>
       <Subscribe/>
    </div>
     
