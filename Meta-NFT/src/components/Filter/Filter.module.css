@@ -1,0 +1,74 @@
+/* Filter.module.css */
+
+.filter {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filter_box_left {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap onto the next line */
+}
+
+.filter_box_left button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #7f8c8d; /* Grayish color */
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter_box_left button:hover {
+    background-color: #95a5a6; /* Lighter gray on hover */
+}
+
+.filter_box_right_box {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.filter_box_items {
+    background-color: #f2f3f4; /* Lighter gray */
+    border: 1px solid #ccc; /* Slightly darker gray */
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.filter_box_items_box {
+    margin-bottom: 20px;
+}
+
+.filter_box_items_box_item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.filter_box_items_box_item_trans {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.filter_box_items_box_item_trans small {
+    margin-left: 10px;
+}
+
+.fa, .ai, .md, .ti {
+    margin-right: 10px;
+}
