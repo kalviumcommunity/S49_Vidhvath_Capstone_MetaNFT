@@ -1,0 +1,146 @@
+/* Keyframes for animations */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scale-up {
+    from {
+        transform: scale(0.95);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.NFTCard {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.NFTCard_box {
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    animation: fade-in 0.5s ease;
+}
+
+.NFTCard_box:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.NFTCard_box_img {
+    position: relative;
+    overflow: hidden;
+}
+
+.NFTCard_box_img_img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.NFTCard_box_update {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+.NFTCard_box_update_left {
+    display: flex;
+    align-items: center;
+}
+
+.NFTCard_box_update_left_like {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.NFTCard_box_update_left_like_icon {
+    margin-right: 5px;
+    color: #ff5252; /* Heart icon color */
+    transition: color 0.3s ease;
+}
+
+.NFTCard_box_update_left_like:hover .NFTCard_box_update_left_like_icon {
+    color: #ff1744; /* Hover color for heart icon */
+}
+
+.NFTCard_box_update_right {
+    text-align: right;
+}
+
+.NFTCard_box_update_right_info {
+    font-size: 14px;
+}
+
+.NFTCard_box_update_details {
+    background-color: #fafafa;
+    padding: 15px;
+}
+
+.NFTCard_box_update_details h4 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333; /* Title color */
+}
+
+.NFTCard_box_update_details_price_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.NFTCard_box_update_details_price_box_box {
+    display: flex;
+    align-items: center;
+}
+
+.NFTCard_box_update_details_price_box_bid,
+.NFTCard_box_update_details_price_box_stock {
+    margin-right: 10px;
+    font-size: 14px;
+    color: #555; /* Text color */
+}
+
+.NFTCard_box_update_details_category {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+    font-size: 24px;
+    color: #4caf50; /* Icon color */
+}
+
+/* Animation for hover effect */
+@keyframes scale-up {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+.NFTCard_box:hover {
+    animation: scale-up 0.3s ease;
+    transform: scale(1.05);
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+    .NFTCard {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
