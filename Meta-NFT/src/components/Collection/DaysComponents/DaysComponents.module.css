@@ -1,0 +1,89 @@
+/* DaysComponents.module.css */
+
+/* Container */
+.DaysComponent {
+    width: 100%;
+}
+
+/* Main box */
+.DaysComponent_box {
+    display: flex;
+    background-color: #f8f9fa;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+/* Image box */
+.daysComponent_box_img {
+    width: 500px;
+    overflow: hidden;
+}
+
+.daysComponent_box_img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+/* Profile box */
+.DaysComponent_box_profile {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+.daysComponent_box_profile img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+/* Title box */
+.daysComponent_box_title {
+    padding: 1rem 2rem;
+}
+
+.daysComponent_box_title h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Info box */
+.DaysComponent_box_title_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.DaysComponent_box_title_info_profile {
+    display: flex;
+    align-items: center;
+}
+
+.DaysComponent_box_title_info_profile img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.DaysComponent_box_title_info_profile p {
+    margin: 0;
+}
+
+.DaysComponent_box_title_info_profile span {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.DaysComponent_box_title_info_price small {
+    font-weight: 600;
+    border: 3px solid #4c5773;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
