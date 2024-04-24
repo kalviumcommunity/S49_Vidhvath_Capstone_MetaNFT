@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { NavBar, Footer } from './components/componentindex'
 import Style from "./styles/index.module.css";
-import { HeroSection, Service, BigNFTSlider, Subscribe, Title, Category, Filter, NFTCard, Collection } from './components/componentindex';
+import { HeroSection, Service, BigNFTSlider, Subscribe, Title, Category, Filter, NFTCard, Collection, FollowerTab } from './components/componentindex';
 
 const MyApp =() => {
 
@@ -14,6 +14,7 @@ const MyApp =() => {
       <Service/>
       <BigNFTSlider/>
       <Collection/>
+      <FollowerTab/>
       <Title heading="Featured NFTs" paragraph="Discover the most outstanding NFTs in all topics of life."/>
       <Filter/>
       <NFTCard/>
