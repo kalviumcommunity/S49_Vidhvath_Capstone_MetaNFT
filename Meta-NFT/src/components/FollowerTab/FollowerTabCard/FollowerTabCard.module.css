@@ -1,0 +1,53 @@
+.FollowerTabCard {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+  }
+  
+  .FollowerTabCard_rank {
+    margin-bottom: 10px;
+  }
+  
+  .FollowerTabCard_rank p {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .FollowerTabCard_rank span {
+    font-size: 24px;
+  }
+  
+  .FollowerTabCard_box_img {
+    margin-bottom: 10px;
+  }
+  
+  .FollowerTabCard_box_profile {
+    margin-bottom: 10px;
+  }
+  
+  .FollowerTabCard_box_info_name {
+    margin-bottom: 10px;
+  }
+  
+  .FollowerTabCard_box_info_name h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .FollowerTabCard_box_info_name span {
+    color: #007bff;
+  }
+  
+  .FollowerTabCard_box_info_following a {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .FollowerTabCard_box_info_following a:hover {
+    text-decoration: underline;
+  }
+  
