@@ -29,6 +29,7 @@ const Profile = () => {
           </div>
           <div className={Style.profile_menu_one_item}>
           <FaRegImage/>
+          
           <p>
             <Link to={{pathaname: '/my-items'}}> My Item</Link>
           </p>
