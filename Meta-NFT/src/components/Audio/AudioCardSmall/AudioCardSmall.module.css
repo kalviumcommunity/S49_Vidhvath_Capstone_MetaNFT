@@ -1,0 +1,59 @@
+/* AudioCardSmall.module.css */
+
+.audioPlayer {
+    margin-bottom: 20px;
+  }
+  
+  .audioPlayer_box {
+    display: flex;
+    align-items: center;
+  }
+  
+  .audioPlayer_box_img {
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .audioPalyer_box_info h4 {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .audioPlayer_box_info_box {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+  }
+  
+  .audioPlayer_box_info_box_price {
+    margin-left: 10px;
+  }
+  
+  .audioPlayer_box_info_box_price small {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .audioPlayer_box_info_box_price p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .audioPlayer_box_playBtn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f9f9f9;
+  }
+  
+  .audioPlayer_box_playBtn svg {
+    font-size: 20px;
+    color: #333;
+  }
+  
