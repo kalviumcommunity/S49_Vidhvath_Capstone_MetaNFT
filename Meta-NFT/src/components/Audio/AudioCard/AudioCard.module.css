@@ -1,0 +1,86 @@
+/* AudioCard.module.css */
+
+.audioCard {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .audioCard_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .audioCard_box_like_time {
+    display: flex;
+    align-items: center;
+  }
+  
+  .audioCard_box_like {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .audioCard_box_like_icon,
+  .audioCard_box_like_icon_unlike {
+    font-size: 1.5rem;
+    margin-right: 5px;
+  }
+  
+  .audioCard_box_time {
+    margin-left: 20px;
+  }
+  
+  .audioCard_box_like_time_remaining {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .audioCard_box_player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .audioCard_box_musicPlayer {
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .audioCard_box_musicPlayer_icon {
+    font-size: 2rem;
+  }
+  
+  .audioCard_box_musicPlayer_icon svg {
+    fill: #333;
+  }
+  
+  .audioCard_box_details {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .audioCard_box_details_info,
+  .audioCard_box_details_stock {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .audioCard_box_details_info_price {
+    margin-top: 10px;
+  }
+  
+  .audioCard_box_img {
+    margin-top: 20px;
+  }
+  
+  .audioCard_box_img img {
+    border-radius: 5px;
+  }
+  

@@ -1,0 +1,77 @@
+/* AudioLive.module.css */
+
+.audioLive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .audioLive_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .audioLive_box_left,
+  .audioLive_box_right {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .audioLive_box_left {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .audioLive_box_right {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Style for AudioCard component */
+  .audioCard {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .audioCard h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .audioCard p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Style for AudioCardSmall component */
+  .audioCardSmall {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .audioCardSmall h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .audioCardSmall p {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #666;
+  }
+  
