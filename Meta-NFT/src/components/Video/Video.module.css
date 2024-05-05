@@ -1,0 +1,32 @@
+/* Video.module.css */
+
+.Video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .Videobox {
+    text-align: center;
+  }
+  
+  .Video_box_frame {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .Video_box_frame_left {
+    margin-right: 10px;
+  }
+  
+  .Video_box_frame_left img {
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Additional styles can be added based on your design requirements */
+  

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { NavBar, Footer } from './components/componentindex'
 import Style from "./styles/index.module.css";
-import { HeroSection, Service, BigNFTSlider, Subscribe, Title, Category, Filter, NFTCard, Collection, FollowerTab, AudioLive, Brand, Slider} from './components/componentindex';
+import { HeroSection, Service, BigNFTSlider, Subscribe, Title, Category, Filter, NFTCard, Collection, FollowerTab, AudioLive, Brand, Slider, Video} from './components/componentindex';
 
 const MyApp =() => {
 
@@ -27,6 +27,7 @@ const MyApp =() => {
       <Category/>
       <Subscribe/>
       <Brand/>
+      <Video/>
    </div>
     
    <Footer/>
