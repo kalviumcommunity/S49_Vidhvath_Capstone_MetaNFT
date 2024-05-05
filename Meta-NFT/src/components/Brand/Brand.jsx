@@ -11,7 +11,7 @@ const Brand = () => {
       <div className={Style.Brand_box}>
         <div className={Style.Brand_box_left}>
           <img src={images.logo1} alt="brand logo" width={100} height={100} />
-          <h1>Earn free crypto with Ciscrypt</h1>
+          <h1>Earn free crypto with MetaNFt</h1>
           <p>A creative agency that leads and inspires.</p>
 
           <div className={Style.Brand_box_left_btn}>

@@ -36,13 +36,13 @@ import zgcmq from "./zgcmq.svg";
 import hero from "./hero.png";
 import nft_1 from "./nft_1.png";
 import getAble from "./getable.png";
-import nft_image_1 from "./nft-image-1.png";
 import nft_image_2 from "./nft-image-2.png";
 import nft_image_3 from "./nft-image-3.png";
 import musiceWave from "./musicwave.png";
 import update from "./update.png";
 import logo1 from "./logo1.png"
 import earn from './eran.png'
+import nft_image_1 from "./nft-image-1.png";
 
 
 export default {
