@@ -1,0 +1,61 @@
+/* SliderCard.module.css */
+
+.sliderCard {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .sliderCard_box {
+    padding: 20px;
+  }
+  
+  .sliderCard_box_img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .sliderCard_box_title {
+    margin-top: 15px;
+  }
+  
+  .sliderCard_box_title p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .sliderCard_box_title_like {
+    display: flex;
+    align-items: center;
+  }
+  
+  .sliderCard_box_title_like small {
+    margin-left: 5px;
+    color: #666;
+  }
+  
+  .sliderCard_box_price {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .sliderCard_box_price_box,
+  .sliderCard_box_price_time {
+    flex: 1;
+  }
+  
+  .sliderCard_box_price_box p {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .sliderCard_box_price_time p {
+    font-size: 14px;
+    color: #666;
+  }
+  

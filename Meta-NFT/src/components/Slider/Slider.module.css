@@ -1,0 +1,59 @@
+/* Slider.module.css */
+
+.slider {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .slider_box {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .slider_box h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .slider_box_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .slider_box_button p {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  .slider_box_button_btn {
+    display: flex;
+  }
+  
+  .slider_box_button_btn_icon {
+    cursor: pointer;
+    font-size: 24px;
+    margin: 0 10px;
+  }
+  
+  .slider_box_items {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  
+  .slider_box_item {
+    display: flex;
+  }
+  
+  /* Style for individual SliderCard component */
+  .slider_item {
+    flex: 0 0 auto;
+    margin-right: 20px;
+  }
+  
+  /* Additional styles for SliderCard component can be added here */
+  
