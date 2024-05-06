@@ -1,0 +1,37 @@
+.SearchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .SearchBar_box {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 25px;
+    padding: 8px 12px;
+  }
+  
+  .SearchBar_box_icon {
+    color: #888;
+    margin-right: 8px;
+  }
+  
+  .SearchBar_box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 200px;
+    font-size: 16px;
+    padding: 6px;
+  }
+  
+  .SearchBar_box input::placeholder {
+    color: #bbb;
+  }
+  
+  .SearchBar_box_icon:last-child {
+    margin-right: 0;
+  }
+  

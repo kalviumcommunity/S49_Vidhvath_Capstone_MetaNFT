@@ -17,7 +17,7 @@ export const Discover = () => {
     },
     {
       name: "Search",
-      link: "search"
+      link: "SearchPAge"
     },
     {
       name: "Author Profile",
