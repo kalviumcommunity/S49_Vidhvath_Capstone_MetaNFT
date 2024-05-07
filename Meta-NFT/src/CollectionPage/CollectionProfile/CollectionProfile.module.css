@@ -1,0 +1,69 @@
+.CollectionProfile {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .collectionProfile_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .collectionProfile_box_left {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .collectionProfile_box_left_img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .collectionProfile_box_left_social {
+    margin-top: 20px;
+  }
+  
+  .collectionProfile_box_left_social a {
+    margin-right: 10px;
+  }
+  
+  .collectionProfile_box_middle {
+    flex: 1;
+  }
+  
+  .collectionProfile_box_middle h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .collectionProfile_box_middle p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .collectionProfile_box_middle_box {
+    display: flex;
+  }
+  
+  .collectionProfile_box_middle_box_item {
+    margin-right: 10px;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .collectionProfile_box {
+      flex-direction: column;
+    }
+  
+    .collectionProfile_box_left,
+    .collectionProfile_box_middle {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+  
