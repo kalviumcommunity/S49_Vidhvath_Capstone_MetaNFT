@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-39
+
 //INTERNAL IMPORT
 import Style from "../styles/author.module.css";
 import { Banner, NFTCardtwo } from '../CollectionPage/Collectionindex'

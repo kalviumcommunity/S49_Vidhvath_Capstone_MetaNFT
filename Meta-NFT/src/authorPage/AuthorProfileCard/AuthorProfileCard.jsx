@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { MdVerified, MdCloudUpload, MdOutlineReportProblem } from 'react-icons/md';
 import { FiCopy } from 'react-icons/fi';
 import { TiSocialFacebook, TiSocialLinkedin, TiSocialYoutube, TiSocialInstagram, TiSocialTwitter } from 'react-icons/ti';
-import { BsThreeBots } from 'react-icons/bs';
+import { BsThreeDots } from 'react-icons/bs';
 
 //INTERNAL IMPORT
 import Style from './AuthorProfileCard.module.css';
@@ -14,14 +14,27 @@ const AuthorProfileCard = () => {
     const [reportError, setReport] = useState(false);
 
     const copyAddress = () => {
-        const input = document.getElementById('myInput');
-        input.select();
-        document.execCommand('copy');
+        const copyText = document.getElementById("myInput");
+        copyText.select();
+        navigator.clipboard.writeText(copyText.value);
     };
 
     const openShare = () => {
-        // Define the functionality to open share here
-        setShare(true);
+        if (!share) {
+            setShare(true);
+            setReport(false);
+        } else {
+            setShare(false);
+        }
+    };
+
+    const openReport = () => {
+        if (!reportError) {
+            setReport(true);
+            setShare(false);
+        } else {
+            setReport(false);
+        }
     };
 
     return (
@@ -48,6 +61,32 @@ const AuthorProfileCard = () => {
                 <div className={Style.AuthorProfileCard_box_share}>
                     <Button btnName="Follow" handleClick={() => {}} />
                     <MdCloudUpload onClick={() => openShare()} className={Style.AuthorProfileCard_box_share_icon} />
+                    {share && (
+                        <div className={Style.AuthorProfileCard_box_share_upload}>
+                            <p>
+                                <span><TiSocialFacebook /></span> Facebook
+                            </p>
+                            <p>
+                                <span><TiSocialInstagram /></span> Instagram
+                            </p>
+                            <p>
+                                <span><TiSocialTwitter /></span> Twitter
+                            </p>
+                            <p>
+                                <span><TiSocialYoutube /></span> Youtube
+                            </p>
+                            <p>
+                                <span><TiSocialLinkedin /></span> LinkedIn
+                            </p>
+                        </div>
+                    )}
+                    <BsThreeDots onClick={() => openReport()} className={Style.AuthorProfileCard_box_share_icon} />
+
+                    {reportError && (
+                        <p className={Style.AuthorProfileCard_box_share_report}>
+                            <span><MdOutlineReportProblem /></span> Report abuse
+                        </p>
+                    )}
                 </div>
             </div>
         </div>
