@@ -1,0 +1,73 @@
+.AuthorTaps {
+    margin-bottom: 20px;
+}
+
+.AuthorTaps_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.AuthorTaps_box_left_btn {
+    display: flex;
+}
+
+.AuthorTaps_box_left_btn button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.AuthorTaps_box_left_btn button:hover,
+.AuthorTaps_box_left_btn button.active {
+    color: #000;
+}
+
+.AuthorTaps_box_right_para {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.AuthorTaps_box_right_para p {
+    margin-right: 5px;
+    font-size: 16px;
+    color: #666;
+}
+
+.AuthorTaps_box_right_list {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    top: 30px;
+    z-index: 1;
+    display: none;
+}
+
+.AuthorTaps_box_right_list_item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.AuthorTaps_box_right_list_item:hover {
+    background-color: #f9f9f9;
+}
+
+.AuthorTaps_box_right_list_item p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.AuthorTaps_box_right_list_item span {
+    color: #3a8dff;
+}
