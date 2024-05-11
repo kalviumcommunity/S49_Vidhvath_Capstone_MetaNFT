@@ -36,7 +36,7 @@ const AuthorProfileCard = () => {
             setReport(false);
         }
     };
-
+    
     return (
         <div className={Style.AuthorProfileCard}>
             <div className={Style.AuthorProfileCard_box}>

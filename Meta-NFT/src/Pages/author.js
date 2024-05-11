@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 //INTERNAL IMPORT
 import Style from "../styles/author.module.css";
 import { Banner, NFTCardtwo } from '../CollectionPage/Collectionindex'
-import { Brand, Title } from '../components/componentindex'
+import { Brand, FollowerTab, Title } from '../components/componentindex'
 import images from '../img'
 import { Discover } from '../components/NavBar';
 import {AuthorProfileCard, AuthorTaps, TabCard} from "../authorPage/componentindex"
@@ -28,6 +28,17 @@ const author = () => {
   return (
         <div className={Style.banner}>
             <Banner bannerImage={images.creatorbackground2}/>
+            <AuthorProfileCard />
+            <AuthorTaps 
+            collectiables={setcollectiables} 
+            like={setLike} 
+            follower={setFollower}
+            following={setfollowing}/>
+           <Title heading="Popular Creators" paragraph="Click on music icon and enjoy NFT music or audio" />
+           {popularArray.map((el, i)=> (
+            <FollowerTab key={i + 1} i={i} el={el}/>
+           ))}
+           <Brand/>
         </div>
   )
 }
