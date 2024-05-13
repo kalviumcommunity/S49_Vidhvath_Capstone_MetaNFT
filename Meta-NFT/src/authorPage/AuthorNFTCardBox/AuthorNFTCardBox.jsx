@@ -2,7 +2,7 @@ import React from 'react'
 
 //INTERNAL IMPORT
 import Style from "./AuthorNFTCardBox.module.css";
-import image from "../../img"
+import images from "../../img"
 import { NFTCardTwo } from '../../CollectionPage/Collectionindex'
 import FOllowerTabCard from '../../components/FollowerTab/FollowerTabCard/FollowerTabCard'
 
@@ -20,7 +20,7 @@ const AuthorNFTCardBox = (collectiables, created, like, follower, following) => 
         images.nft_image_3,
     ]
 
-    const CreatedArray =  [
+    const createdArray =  [
         images.nft_image_1,
         images.nft_image_2,
         images.nft_image_3
@@ -34,7 +34,7 @@ const AuthorNFTCardBox = (collectiables, created, like, follower, following) => 
         images.nft_image_3,
     ]
 
-    const FollowerArray = [
+    const followerArray = [
          images.user1,
          images.user10,
          images.user2,
