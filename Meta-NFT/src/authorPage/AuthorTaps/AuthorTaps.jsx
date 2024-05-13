@@ -40,7 +40,7 @@ const AuthorTaps = ({
         setFollowing(false);
         setLike(false);
         setActiveBtn(1);
-      } else if (btnText){
+      } else if (btnText == "Created"){
         setCollectiables(false);
         setCreated(true);
         setFollower(false);

@@ -6,7 +6,7 @@ import { Banner, NFTCardtwo } from '../CollectionPage/Collectionindex'
 import { Brand, FollowerTab, Title } from '../components/componentindex'
 import images from '../img'
 import { Discover } from '../components/NavBar';
-import {AuthorProfileCard, AuthorTaps, TabCard} from "../authorPage/componentindex"
+import {AuthorProfileCard, AuthorTaps,  AuthorNFTCardBox} from "../authorPage/componentindex"
 
 const author = () => {
     const popularArray = [
@@ -34,6 +34,12 @@ const author = () => {
             like={setLike} 
             follower={setFollower}
             following={setfollowing}/>
+            <AuthorNFTCardBox 
+            collectiables={collectiables} 
+            created={created}
+            like = {like}
+            follower={follower}
+            following={following}/>
            <Title heading="Popular Creators" paragraph="Click on music icon and enjoy NFT music or audio" />
            {popularArray.map((el, i)=> (
             <FollowerTab key={i + 1} i={i} el={el}/>
