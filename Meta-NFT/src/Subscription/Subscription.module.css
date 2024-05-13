@@ -1,0 +1,67 @@
+.SubscriptionBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .Subscription_box {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .Subscription_box_span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+  }
+  
+  .Subscription_box_small {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #666666;
+  }
+  
+  .SubscriptionBox_box_small_para {
+    margin: 15px 0;
+    font-size: 28px;
+    font-weight: bold;
+    color: #007bff; /* Blue color for price */
+  }
+  
+  .SubscriptionBox_box_info {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .SubscriptionBox_box_info_para {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #666666;
+  }
+  
+  .SubscriptionBox_box_info_para span {
+    margin-right: 10px;
+  }
+  
+  /* Style for the submit button */
+  .Button {
+    background-color: #007bff; /* Blue color for the button */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .Button:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+  }
+  
