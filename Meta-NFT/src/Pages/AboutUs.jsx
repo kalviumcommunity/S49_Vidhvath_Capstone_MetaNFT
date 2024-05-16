@@ -3,7 +3,7 @@ import React from 'react';
 // INTERNAL IMPORT
 import Style from '../styles/AboutUs.module.css';
 import { Brand } from '../components/componentindex';
-import MdImageSearch from '../img/MdImageSearch'; // Assuming MdImageSearch is the correct import
+// import MdImageSearch from '../img/MdImageSearch'; // Assuming MdImageSearch is the correct import
 import image from '../img'; // Assuming this import is needed
 
 const AboutUs = () => {
