@@ -1,18 +1,25 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import './App.css'
 import { NavBar, Footer } from './components/componentindex'
 import Style from "./styles/index.module.css";
 import { HeroSection, Service, BigNFTSlider, Subscribe, Title, Category, Filter, NFTCard, Collection, FollowerTab, AudioLive, Brand, Slider, Video} from './components/componentindex';
+import { Route,Routes } from 'react-router-dom';
+import AboutUs from '../src/Pages/AboutUs';
+import NFTDetails from './Pages/NFTDetails';
 
 const MyApp =() => {
 
  return (
    <div>
+    <Routes>
+      <Route path="/AboutUs" element={<AboutUs/>}/>
+    </Routes>
    <NavBar />
    <div className={StylePropertyMap.homepage}>
       <HeroSection />
       <Service/>
       <BigNFTSlider/>
+      <NFTDetails/>
       
       <Title heading="Latest Audio Collection" paragraph="Discover the most outstanding NFTs in all topics of life."/>
 
@@ -32,6 +39,7 @@ const MyApp =() => {
    </div>
     
    <Footer/>
+   
   
    </div>
  );
