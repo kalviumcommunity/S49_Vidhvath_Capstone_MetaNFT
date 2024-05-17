@@ -6,41 +6,22 @@ import { HeroSection, Service, BigNFTSlider, Subscribe, Title, Category, Filter,
 import { Route,Routes } from 'react-router-dom';
 import AboutUs from '../src/Pages/AboutUs';
 import NFTDetails from './Pages/NFTDetails';
+import Landing from './Pages/Landing';
+
+
 
 const MyApp =() => {
 
  return (
    <div>
     <Routes>
-      <Route path="/AboutUs" element={<AboutUs/>}/>
-    </Routes>
-   <NavBar />
-   <div className={StylePropertyMap.homepage}>
-      <HeroSection />
-      <Service/>
-      <BigNFTSlider/>
-      <NFTDetails/>
+      <Route path="/" element={<Landing/>}/>
+      <Route path="/NFTdetails" element={<NFTDetails/>}/>
+      <Route path="/Collection" element={<Collection/>}/>
       
-      <Title heading="Latest Audio Collection" paragraph="Discover the most outstanding NFTs in all topics of life."/>
 
-      <AudioLive/>
-      <Collection/>
-      <FollowerTab/>
-      <Slider/>
-      <Title heading="Featured NFTs" paragraph="Discover the most outstanding NFTs in all topics of life."/>
-      <Filter/>
-      <NFTCard/>
-      <Title heading="Browse by category" paragraph="Explore the NFTs in the most featured categories. "/>
-
-      <Category/>
-      <Subscribe/>
-      <Brand/>
-      <Video/>
-   </div>
-    
-   <Footer/>
+    </Routes>
    
-  
    </div>
  );
 };

@@ -3,7 +3,7 @@ import {  TiSocialInstagram, TiSocialLinkedin, TiSocialTwitter , TiSocialFaceboo
 
 
 //INTERNAL IMPORT
-import Style from './collectionProfile.module.css';
+import Style from './CollectionProfile.module.css';
 import image from '../../img'
 
 

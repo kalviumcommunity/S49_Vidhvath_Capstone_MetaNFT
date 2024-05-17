@@ -5,7 +5,7 @@ import { MdVerified, MdTimer } from 'react-icons/md';
 
 //INTERNAL IMPORTS
 import Style from './NFTCardtwo.module.css';
-import { LikeProfile } from '../../components/LikeProfile';
+// import { LikeProfile } from '../../components/LikeProfile/LikeProfilel';
 
 const NFTCardtwo = ({ NFTData }) => {
   const [like, setLike] = useState(false);
@@ -45,7 +45,7 @@ const NFTCardtwo = ({ NFTData }) => {
           </div>
           <div className={Style.NFTCardTwo_box_info}>
             <div className={Style.NFTCardTwo_box_info_left}>
-              <LikeProfile />
+              
               <p>Clone #{i + 1}</p>
             </div>
             <small>4{i + 2}</small>
