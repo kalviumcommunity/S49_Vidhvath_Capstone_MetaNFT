@@ -1,6 +1,6 @@
 import React from 'react'
 import {  TiSocialFacebook, TiSocialLinkedin, TiSocialTwitter, TiSocialYoutube, TiSocialInstagram } from "react-icons/ti";
-import { HiOutlineMall } from 'react-icons/hi'
+// import { HiOutlineMall } from 'react-icons/hi'
 
 //INTERNAL IMPORT
 import Style from '../styles/ContactUs.module.css'

@@ -2,11 +2,11 @@ import React from 'react'
 import { Slider, Brand } from '../components/componentindex'
 import { SearchBar } from '../SearchPage/SearchPageindex'
 import Filter from '../components/componentindex'
-import { NFTCardTwo, Banner} from '../CollectionPage/Collectionindex'
+import {  Banner} from '../CollectionPage/Collectionindex'
 // INTRNAL IMPORT 
-import Style from '../styles/SearchPAge'
+import Style from '../styles/SearchPAge.module.css'
 
-const SearchPAge = () => {
+const Search = () => {
 
   const collectionArray = [
     images.nft_image_1,
@@ -24,4 +24,4 @@ const SearchPAge = () => {
   )
 }
 
-export default SearchPAge
+export default Search
