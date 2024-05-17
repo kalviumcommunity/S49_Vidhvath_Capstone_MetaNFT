@@ -1,9 +1,30 @@
-import React from 'react'
+import React from 'react';
 
-const NFTTabs = () => {
+// INTERNAL IMPORT
+import Style from './NFTTabs.module.css';
+
+const NFTTabs = ({ dataTab }) => {
   return (
-    <div>NFTTabs</div>
-  )
-}
+    <div className={Style.NFTTabs}>
+      {dataTab.map((el, i) => (
+        <div className={Style.NFTTabs_box} key={i}>
+          <img
+            src={el}
+            alt="profile"
+            width={40}
+            height={40}
+            className={Style.NFTTabs_box_img}
+          />
+          <div className={Style.NFTTabs_box_info}>
+            <span>
+              Offer by $770 by <small>Vidhvath J</small>
+            </span>
+            <small>Jun 14 - 4:12 PM</small>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
 
-export default NFTTabs
+export default NFTTabs;
