@@ -1,0 +1,215 @@
+/* NFTDescriptions.module.css */
+
+.NFTDescription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .NFTDescription_box {
+    width: 100%;
+    max-width: 1000px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .NFTDescription_box_share {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .NFTDescription_box_share_box {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .NFTDescription_box_share_box_box_icon {
+    font-size: 24px;
+    color: #ff6ec7;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .NFTDescription_box_share_box_social {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .NFTDescription_box_share_box_social a {
+    color: #fff;
+    text-decoration: none;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .NFTDescription_box_share_box_social a svg {
+    margin-right: 5px;
+  }
+  
+  .NFTDescription_box_share_box_profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .NFTDescription_box_share_box_profile h1 {
+    font-size: 32px;
+    color: #fff;
+    margin: 0;
+  }
+  
+  .NFTDescription_box_profile_box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .NFTDescription_box_profile_box_left,
+  .NFTDescription_box_profile_box_right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .NFTDescription_box_profile_box_left_img,
+  .NFTDescription_box_profile_box_right_img {
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+  }
+  
+  .NFTDescription_box_profile_box_left_info,
+  .NFTDescription_box_profile_box_right_info {
+    margin-left: 10px;
+    color: #fff;
+  }
+  
+  .NFTDescription_box_profile_biding {
+    margin-top: 20px;
+  }
+  
+  .NFTDescription_box_profile_biding p {
+    display: flex;
+    align-items: center;
+    color: #ff6ec7;
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .NFTDescription_box_profile_biding_timer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .NFTDescription_box_profile_biding_timer_item {
+    text-align: center;
+    color: #fff;
+  }
+  
+  .NFTDescription_box_profile_biding_timer_item p {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .NFTDescription_box_profile_biding_timer_item span {
+    font-size: 14px;
+  }
+  
+  .NFTDescription_box_profile_biding_box_price {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .NFTDescription_box_profile_biding_box_price_bid {
+    color: #fff;
+  }
+  
+  .NFTDescription_box_profile_biding_box_price_bid small {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .NFTDescription_box_profile_biding_box_price_bid p {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .NFTDescription_box_profile_biding_box_button {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .button {
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .button:hover {
+    background: linear-gradient(135deg, #928dab, #1f1c2c);
+  }
+  
+  .NFTDescription_box_profile_biding_box_tabs {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .NFTDescription_box_profile_biding_box_tabs button {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .NFTDescription_box_profile_biding_box_tabs button:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .NFTDescription_box_profile_biding_box_card {
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .NFTDescription_box_profile_biding_box_card img {
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+  }
+  
