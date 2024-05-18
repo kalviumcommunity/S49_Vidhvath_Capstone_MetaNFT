@@ -1,0 +1,123 @@
+/* NFTDetailimg.module.css */
+
+.NFTDetailsImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .NFTDetailsImg_box {
+    width: 100%;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .NFTDetailsImg_box_NFT {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .NFTDetailsImg_box_NFT_like {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .NFTDetailsImg_box_NFT_like_icon {
+    font-size: 24px;
+    color: #ff6ec7;
+    margin-right: 5px;
+  }
+  
+  .NFTDetailsImg_box_NFT_like p {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  .NFTDetailsImg_box_NFT_img {
+    width: 100%;
+    max-width: 700px;
+    margin-top: 20px;
+  }
+  
+  .NFTDetailsImg_box_NFT_img_img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+  }
+  
+  .NFTDetailsImg_box_description,
+  .NFTDetailsImg_box_details {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .NFTDetailsImg_box_description:hover,
+  .NFTDetailsImg_box_details:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .NFTDetailsImg_box_description p,
+  .NFTDetailsImg_box_details p {
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .NFTDetailsImg_box_description_box,
+  .NFTDetailsImg_box_details_box {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  
+  .NFTDetailsImg_box_description_box p,
+  .NFTDetailsImg_box_details_box small {
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  .NFTDetailsImg_box_details_box p {
+    margin: 10px 0;
+    color: #b0b0b0;
+    font-size: 14px;
+  }
+  
+  .NFTDetailsImg_box_details_box small::before {
+    content: '🕒';
+    margin-right: 5px;
+    font-size: 12px;
+    color: #ff6ec7;
+  }
+  
