@@ -1,0 +1,58 @@
+/* NFTTabs.module.css */
+
+.NFTTabs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .NFTTabs_box {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .NFTTabs_box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+  }
+  
+  .NFTTabs_box_img {
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+  }
+  
+  .NFTTabs_box_info {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+  }
+  
+  .NFTTabs_box_info span {
+    font-size: 16px;
+    font-weight: 700;
+    color: #e0e0e0;
+  }
+  
+  .NFTTabs_box_info small {
+    font-size: 14px;
+    color: #b0b0b0;
+  }
+  
+  .NFTTabs_box_info small::before {
+    content: '🕒';
+    margin-right: 5px;
+    font-size: 12px;
+    color: #ff6ec7;
+  }
+  
