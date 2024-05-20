@@ -1,0 +1,66 @@
+.ConnectWallet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.ConnectWallet_box {
+    background: #262626;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.ConnectWallet_box h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.ConnectWallet_box_para {
+    margin-bottom: 30px;
+    color: #a0a0a0;
+}
+
+.ConnectWallet_box_provider {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.ConnectWallet_box_provider_item {
+    background: #333333;
+    border-radius: 10px;
+    padding: 15px;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.ConnectWallet_box_provider_item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.ConnectWallet_box_provider_item_img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.ConnectWallet_box_provider_item p {
+    margin: 0;
+    font-size: 14px;
+    color: #fff;
+}
+
+.active {
+    border: 2px solid #0070f3;
+}

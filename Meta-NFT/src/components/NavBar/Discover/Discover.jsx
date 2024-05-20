@@ -30,7 +30,7 @@ export const Discover = () => {
       name: "Account Setting",
     },
     {
-      name: "Connect Wallet",
+      name: "ConnectWallet",
     },
     {
       name: "Blog",
