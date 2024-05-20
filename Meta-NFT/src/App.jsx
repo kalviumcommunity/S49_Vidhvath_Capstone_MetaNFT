@@ -7,6 +7,8 @@ import { Route,Routes } from 'react-router-dom';
 import AboutUs from '../src/Pages/AboutUs';
 import NFTDetails from './Pages/NFTDetails';
 import Landing from './Pages/Landing';
+import ContactUs from './Pages/ContactUs'
+import ConnectWallet from './Pages/ConnectWallet';
 
 
 
@@ -18,7 +20,10 @@ const MyApp =() => {
       <Route path="/" element={<Landing/>}/>
       <Route path="/NFTdetails" element={<NFTDetails/>}/>
       <Route path="/Collection" element={<Collection/>}/>
+      <Route path="/ConnectWallet" element={<ConnectWallet/>}/>
       
+
+    
 
     </Routes>
    

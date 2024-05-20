@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 //INTERNAL IMPORT
 import Style from "../styles/author.module.css";
-import { Banner, NFTCardtwo } from '../CollectionPage/Collectionindex'
+import { Banner } from '../CollectionPage/Collectionindex'
 import { Brand, FollowerTab, Title } from '../components/componentindex'
 import images from '../img'
 import { Discover } from '../components/NavBar';

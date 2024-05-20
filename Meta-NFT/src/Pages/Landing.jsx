@@ -4,7 +4,8 @@ import { NavBar, Footer } from '../components/componentindex'
 import Style from "../styles/index.module.css";
 import { HeroSection, Service, BigNFTSlider, Subscribe, Title, Category, Filter, NFTCard, Collection, FollowerTab, AudioLive, Brand, Slider, Video} from '../components/componentindex';
 import { Route,Routes } from 'react-router-dom';
-import AboutUs from '../Pages/AboutUs';
+
+
 
 
 const Landing =() => {
@@ -16,6 +17,7 @@ const Landing =() => {
       <HeroSection />
       <Service/>
       <BigNFTSlider/>
+      
      
       
       <Title heading="Latest Audio Collection" paragraph="Discover the most outstanding NFTs in all topics of life."/>

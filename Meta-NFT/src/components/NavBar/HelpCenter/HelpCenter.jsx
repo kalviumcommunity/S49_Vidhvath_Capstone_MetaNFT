@@ -8,23 +8,23 @@ const HelpCenter = () => {
   const helpCenter = [
     {
       name: "About",
-      link: "/AboutUs",
+      
     },
     {
-      name: "Contact Us",
-      link: "ContactUs",
+      name: "ContactUs",
+     
     },
     {
       name: "Sign Up",
-      link: "sign-up",
+      
     },
     {
       name: "Sign In",
-      link: "sign-in",
+      
     },
     {
       name: "Subscription",
-      link: "subscription",
+      
     },
   ];
   const [selectvalue,setselectvalue] = useState('/')
