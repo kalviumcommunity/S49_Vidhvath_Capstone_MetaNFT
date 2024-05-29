@@ -1,0 +1,138 @@
+.upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0d0d0d; /* Dark background for a sleek look */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    color: #fff; /* White text for contrast */
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .upload_box {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .Form_box_input {
+    margin-bottom: 20px;
+  }
+  
+  .Form_box_input label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+    color: #e91e63; /* Vibrant accent color for labels */
+  }
+  
+  .Form_box_input input,
+  .Form_box_input textarea,
+  .Form_box_input select {
+    width: 100%;
+    padding: 10px;
+    background-color: #1a1a1a; /* Slightly lighter background for inputs */
+    border: 2px solid #333; /* Subtle border */
+    border-radius: 5px;
+    color: #fff; /* White text for contrast */
+    transition: border 0.3s;
+  }
+  
+  .Form_box_input input:focus,
+  .Form_box_input textarea:focus,
+  .Form_box_input select:focus {
+    border: 2px solid #e91e63; /* Highlight border on focus */
+  }
+  
+  .Form_box_input_box {
+    display: flex;
+    align-items: center;
+  }
+  
+  .Form_box_input_box_icon {
+    margin-right: 10px;
+    font-size: 1.2em;
+    color: #e91e63; /* Icon accent color */
+  }
+  
+  .upload_box_input_para {
+    font-size: 0.9em;
+    color: #aaa; /* Lighter color for subtext */
+    margin-top: 8px;
+  }
+  
+  .upload_box_slider_div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .upload_box_slider {
+    position: relative;
+    background-color: #1a1a1a;
+    border: 2px solid #333;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border 0.3s;
+  }
+  
+  .upload_box_slider.active {
+    border: 2px solid #e91e63; /* Highlight active slider */
+  }
+  
+  .upload_box_slider_box {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .upload_box_slider_box_img {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .upload_box_slider_box_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .upload_box_slider_box_img_icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 1.5em;
+    color: #e91e63;
+  }
+  
+  .upload_box_btn {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .upload_box_btn_style {
+    padding: 10px 30px;
+    background-color: #e91e63; /* Button background color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .upload_box_btn_style:hover {
+    background-color: #c2185b; /* Slightly darker on hover */
+    transform: translateY(-2px); /* Subtle lift effect */
+  }
+  
+  .upload_box_btn_style:active {
+    background-color: #ad1457; /* Darker on click */
+    transform: translateY(0); /* Reset lift effect */
+  }
+  
