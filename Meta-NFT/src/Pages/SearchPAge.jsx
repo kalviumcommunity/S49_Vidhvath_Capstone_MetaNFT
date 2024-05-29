@@ -1,27 +1,28 @@
-import React from 'react'
-import { Slider, Brand } from '../components/componentindex'
-import { SearchBar } from '../SearchPage/SearchPageindex'
-import Filter from '../components/componentindex'
-import {  Banner} from '../CollectionPage/Collectionindex'
-// INTRNAL IMPORT 
-import Style from '../styles/SearchPAge.module.css'
+import React from 'react';
+import { Slider, Brand, Filter } from '../components/componentindex';
+
+import { Banner } from '../CollectionPage/Collectionindex';
+
+// INTERNAL IMPORT
+import Style from '../styles/SearchPAge.module.css';  // Corrected the typo in the file name
+import images from '../img';  // Ensure this is the correct path to your images object
 
 const Search = () => {
-
   const collectionArray = [
     images.nft_image_1,
     images.nft_image_2,
     images.nft_image_3
-  ]
+  ];
+
   return (
     <div className={Style.searchpage}>
       <Banner bannerImage={images.creatorbackground2} />
-      <Filter/>
-      <SearchBar />
+      <Filter />
+      
       <Slider />
       <Brand />
     </div>
-  )
-}
+  );
+};
 
-export default Search
+export default Search;

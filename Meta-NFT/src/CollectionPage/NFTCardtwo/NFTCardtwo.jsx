@@ -3,11 +3,10 @@ import { BsImage } from 'react-icons/bs';
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 import { MdVerified, MdTimer } from 'react-icons/md';
 
-//INTERNAL IMPORTS
+// INTERNAL IMPORT
 import Style from './NFTCardtwo.module.css';
-// import { LikeProfile } from '../../components/LikeProfile/LikeProfilel';
 
-const NFTCardtwo = ({ NFTData }) => {
+const NFTCardTwo = ({ NFTData }) => {
   const [like, setLike] = useState(false);
   const [likeInc, setLikeInc] = useState(21);
 
@@ -23,12 +22,12 @@ const NFTCardtwo = ({ NFTData }) => {
 
   return (
     <div className={Style.NFTCardtwo}>
-      {NFTData.map(({ el }, i) => (
+      {NFTData.map((el, i) => (
         <div className={Style.NFTCardTwo_box} key={i + 1}>
           <div className={Style.NFTCardTwo_box_like_box}>
             <div className={Style.NFTCardTwo_box_like_box_box}>
               <BsImage className={Style.NFTCardTwo_box_like_box_box_icon} />
-              <p onClick={() => likeNFT()}>
+              <p onClick={likeNFT}>
                 {like ? <AiOutlineHeart /> : <AiFillHeart />}{" "}
                 <span>{likeInc + 1}</span>
               </p>
@@ -45,7 +44,6 @@ const NFTCardtwo = ({ NFTData }) => {
           </div>
           <div className={Style.NFTCardTwo_box_info}>
             <div className={Style.NFTCardTwo_box_info_left}>
-              
               <p>Clone #{i + 1}</p>
             </div>
             <small>4{i + 2}</small>
@@ -65,4 +63,4 @@ const NFTCardtwo = ({ NFTData }) => {
   );
 };
 
-export default NFTCardtwo;
+export default NFTCardTwo;

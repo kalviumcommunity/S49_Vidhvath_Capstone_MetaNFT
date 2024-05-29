@@ -1,5 +1,5 @@
 import React from 'react'
-import {  TiSocialInstagram, TiSocialLinkedin, TiSocialTwitter , TiSocialFacebookp} from 'react-icons/ti';
+import {  TiSocialInstagram, TiSocialLinkedin, TiSocialTwitter , TiSocialFacebook} from 'react-icons/ti';
 
 
 //INTERNAL IMPORT

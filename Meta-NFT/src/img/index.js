@@ -53,7 +53,7 @@ export default {
   musiceWave,
   nft_image_1,
   nft_image_2,
-  nft_image_3,
+nft_image_3,
   getAble,
   nft_1,
   hero,
