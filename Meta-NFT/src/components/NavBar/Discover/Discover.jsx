@@ -27,7 +27,10 @@ export const Discover = () => {
       name: "NFTdetails",
     },
     {
-      name: "Account Setting",
+      name: "Account_Setting",
+    },
+    {
+      name: "UploadNFT"
     },
     {
       name: "ConnectWallet",

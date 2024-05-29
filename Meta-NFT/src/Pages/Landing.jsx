@@ -8,15 +8,22 @@ import { Route,Routes } from 'react-router-dom';
 
 
 
+
+
 const Landing =() => {
 
  return (
    <div>
    <NavBar />
+
+  
+   
    <div className={StylePropertyMap.homepage}>
       <HeroSection />
       <Service/>
       <BigNFTSlider/>
+      
+      
       
      
       
