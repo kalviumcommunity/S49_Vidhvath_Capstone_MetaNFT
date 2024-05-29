@@ -19,7 +19,7 @@ const Upload = () => {
   const [royalties, setRoyalties] = useState("");
   const [fileSize, setFileSize] = useState("");
   const [category, setCategory] = useState(0);
-  const [properties, setproperties] = useState("")
+  const [properties, setProperties] = useState("");
 
   const categoryArray = [
     {
@@ -64,6 +64,7 @@ const Upload = () => {
         royalties={royalties}
         fileSize={fileSize}
         category={category}
+        properties={properties}
         image={images.upload}
       />
 
@@ -90,14 +91,16 @@ const Upload = () => {
               onChange={(e) => setWebsite(e.target.value)}
             />
           </div>
+          <p className={Style.upload_box_input_para}>It will include a link to this URL on this item's detail page, so that users can click to learn more about it. You are welcome to link to your own webpage with more details</p>
         </div>
 
         <div className={Style.Form_box_input}>
           <label htmlFor="description">Description</label>
           <textarea
-            placeholder="Description"
+            placeholder="Something about yourself in few words"
             onChange={(e) => setDescription(e.target.value)}
           />
+          <p>The description will be included on the item's detail page underneath its image. Markdown syntax is supported</p>
         </div>
 
         <div className={Style.Form_box_input}>
@@ -139,83 +142,64 @@ const Upload = () => {
               ))}
             </select>
           </div>
-          <p className={Style.upload_box_input_para}>It will include a link to this URL on this item's detail page, so that users can click to learn more about it. You are welcome to link to your own webpage with more details</p>
         </div>
-        <div className={Style.Form_box_input}>
-            <label htmlFor="description">Description</label>
-            <textarea name="" id="" cols="30" rows="6" placeholder='Something about yourself in few words'></textarea>
-            <p>The description will be included on the item's detail page underneath its image. Markdown syntax is supported </p>
-          </div>
-          <div className={formStyle.Form_box_input}>
-            <label htmlFor="name">
-              Choose collection
-            </label>
-            <p className={Style.upload_box_input_para}>
-              Choose an exciting collection or create a new one 
-              </p>
-              <div className={Style.upload_box_slider_div}>
-                {categoryArray.map((el, i)=> (
-                  <div className={`${Style.upload_box_slider}${
-                    active == i + 1 ? 
-                    Style.active : ""}`}
-                    key={i + 1}
-                    onClick={(()=> setActive(i + 1), setCategory(el.category))}
-                    >
-                      <div className={Style.upload_box_slider_box}>
-                        <div className={Style.upload_box_slider_box_img}>
-                          <img 
-                          src={el.image} 
-                          alt="background image"
-                          width={70}
-                          height={70} 
-                          className={Style.upload_box_slider_box_img_img}/>
-                        </div>
-                        <div className={Style.upload_box_slider_box_img_icon}>
-                          <TiTick/>
 
-                        </div>
-                      </div>
-                      <p>Crypto Legend - Professor</p>
-
+        <div className={formStyle.Form_box_input}>
+          <label htmlFor="collection">Choose collection</label>
+          <p className={Style.upload_box_input_para}>Choose an exciting collection or create a new one</p>
+          <div className={Style.upload_box_slider_div}>
+            {categoryArray.map((el, i) => (
+              <div
+                className={`${Style.upload_box_slider} ${active === i + 1 ? Style.active : ""}`}
+                key={i + 1}
+                onClick={() => {
+                  setActive(i + 1);
+                  setCategory(el.category);
+                }}
+              >
+                <div className={Style.upload_box_slider_box}>
+                  <div className={Style.upload_box_slider_box_img}>
+                    <img
+                      src={el.image}
+                      alt="background"
+                      width={70}
+                      height={70}
+                      className={Style.upload_box_slider_box_img_img}
+                    />
                   </div>
-                ))}
+                  <div className={Style.upload_box_slider_box_img_icon}>
+                    <TiTick />
+                  </div>
+                </div>
+                <p>Crypto Legend - Professor</p>
               </div>
+            ))}
+          </div>
+        </div>
+
+        <div className={Style.Form_box_input_social}>
+          <div className={Style.Form_box_input}>
+            <label htmlFor="properties">Properties</label>
+            <div className={Style.Form_box_input_box}>
+              <div className={Style.Form_box_input_box_icon}>
+                <AiTwotonePropertySafety />
+              </div>
+              <input
+                type="text"
+                placeholder="Properties"
+                onChange={(e) => setProperties(e.target.value)}
+              />
+            </div>
           </div>
 
-          <div className={Style.Form_box_input_social}>
-            <div className={Style.Form_box_input}>
-              <label htmlFor="Royalties">Royalties</label>
-              <div className={Style.Form_box_input_box}>
-                <div className={Style.Form_box_input_box_icon}>
-                  <FaPercent />
-                </div>
-                <input type="text" placeholder="20%" onChange={(e)=> setRoyalties(e.target.value)} />
-              </div>
-            </div>
-            <div className={Style.Form_box_input}>
-              <label htmlFor="size">Size</label>
-              <div className={Style.Form_box_input_box}>
-                <div className={Style.Form_box_input_box_icon}>
-                  <TiSocialTwitter />
-                </div>
-                <input type="text" placeholder="165MB"
-                onChange={(e)=> setFileSize(e.target.value)} />
-              </div>
-            </div>
-            <div className={Style.Form_box_input}>
-              <label htmlFor="Properties">Properties</label>
-              <div className={Style.Form_box_input_box}>
-                <div className={Style.Form_box_input_box_icon}>
-                  <TiSocialInstagram />
-                </div>
-                <input type="text" placeholder="properties"
-                onChange={(e)=> setproperties(e.target.value)}  />
-              </div>
-              <div className={Style.upload_box_btn}>
-                <Button btnName="Upload" handleClick={()=> {}} classStyle={Style.upload_box_btn_style}/>
-              </div>
-            </div>
+          <div className={Style.upload_box_btn}>
+            <Button
+              btnName="Upload"
+              handleClick={() => {}}
+              classStyle={Style.upload_box_btn_style}
+            />
           </div>
+        </div>
       </div>
     </div>
   );
