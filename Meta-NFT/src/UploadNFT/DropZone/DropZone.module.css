@@ -1,0 +1,92 @@
+.DropZone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0d0d0d; /* Dark background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    color: #fff; /* White text for contrast */
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  .DropZone_box {
+    width: 100%;
+    padding: 40px;
+    border: 2px dashed #e91e63; /* Vibrant accent color for the border */
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .DropZone_box:hover {
+    background-color: rgba(233, 30, 99, 0.1); /* Slightly darken on hover */
+    border-color: #c2185b; /* Darken border color on hover */
+  }
+  
+  .DropZone_box_input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .DropZone_box_input p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #fff; /* Keep text white */
+  }
+  
+  .DropZone_box_input_img {
+    margin: 20px 0;
+  }
+  
+  .DropZone_box_input_img_img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .DropZone_box_aside {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #1a1a1a; /* Slightly lighter background for preview box */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  .DropZone_box_aside_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .DropZone_box_aside_box img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+  }
+  
+  .DropZone_box_aside_box_preview {
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .DropZone_box_aside_box_preview p {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #ccc; /* Lighter color for text */
+  }
+  
+  .DropZone_box_aside_box_preview span {
+    font-weight: bold;
+    color: #e91e63; /* Accent color for labels */
+  }
+  
+  .DropZone_box_aside_box_preview_one,
+  .DropZone_box_aside_box_preview_two,
+  .DropZone_box_aside_box_preview_three {
+    margin-bottom: 20px;
+  }
+  
