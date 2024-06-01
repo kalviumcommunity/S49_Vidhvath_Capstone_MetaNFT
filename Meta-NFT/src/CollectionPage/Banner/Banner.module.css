@@ -1,29 +1,48 @@
 .banner {
-    position: relative;
-    width: 100%;
-    height: auto;
-  }
-  
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d0d0d; /* Dark background for sleek look */
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+.banner_img, .banner_img_mobile {
+  width: 100%;
+  height: auto;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px; /* Rounded corners for modern look */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.img:hover {
+  transform: scale(1.05); /* Slight zoom on hover for interactivity */
+}
+
+.banner_img_mobile {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .banner_img {
-    display: block;
-  }
-  
-  .banner_img_mobile {
     display: none;
   }
-  
+
+  .banner_img_mobile {
+    display: block;
+  }
+
   .img {
-    width: 100%;
     height: auto;
-    object-fit: cover;
+    border-radius: 0; /* Remove border radius on mobile for edge-to-edge display */
   }
-  
-  @media (max-width: 768px) {
-    .banner_img {
-      display: none;
-    }
-    .banner_img_mobile {
-      display: block;
-    }
-  }
-  
+}

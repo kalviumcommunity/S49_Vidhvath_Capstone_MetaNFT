@@ -1,7 +1,7 @@
 import React from 'react'
 
 //INTERNAL IMPORT
-// import Style from '../styles/Collection.module.css'
+import Style from '../styles/Collection.module.css'
 import images from '../img'
 import {Banner, CollectionProfile, NFTCardtwo} from '../CollectionPage/Collectionindex'
 import {Slider, Brand} from '../components/componentsindex'
