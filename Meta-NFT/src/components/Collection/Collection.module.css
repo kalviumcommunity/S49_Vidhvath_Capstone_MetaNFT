@@ -1,61 +1,53 @@
+/* Collection.module.css */
+
 .collection {
-    margin: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+    color: #ffffff;
 }
 
 .collection_title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.collection_title h2 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.collection_collections {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.collection_collections_btn {
+    display: flex;
+    gap: 1rem;
 }
 
 .collection_collections_btn button {
     background: none;
     border: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     cursor: pointer;
-    padding: 10px 15px;
-    margin-right: 10px;
-    color: #333;
     transition: color 0.3s ease;
 }
 
 .collection_collections_btn button:hover {
-    color: #007bff;
-}
-
-.collection_collections_btn button.selected {
-    color: #007bff;
+    color: #8e2de2;
 }
 
 .collection_box {
-    display: flex;
-    justify-content: center;
-}
-
-.cards {
-    display: none;
-    flex-wrap: wrap;
-}
-
-.visible {
-    display: flex;
-}
-
-.cards div {
-    width: 100px;
-    height: 100px;
-    background-color: #007bff;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-    font-size: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.cards div:hover {
-    transform: translateY(-5px);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
 }

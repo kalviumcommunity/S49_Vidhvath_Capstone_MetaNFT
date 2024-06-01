@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { TiMediaPlay, TiMediaPause } from 'react-icons/ti'; // Assuming these are icons for play and pause
 
 // Assuming `LikeProfile` component is imported from somewhere
-import LikeProfile from './LikeProfile'; // You need to import this component
+
 
 // Assuming `images` is imported correctly and `creatorbackground1` is a valid key
 import images from '../../../img'; // You need to import images and ensure correct path
@@ -24,7 +24,7 @@ const AudioCardSmall = () => {
                 <div className={Style.audioPalyer_box_info}>
                     <h4>NFT music #1142</h4>
                     <div className={Style.audioPlayer_box_info_box}>
-                        <LikeProfile />
+                       
                         <div className={Style.audioPlayer_box_info_box_price}>
                             <small>Price</small>
                             <p>1.00 ETH</p>

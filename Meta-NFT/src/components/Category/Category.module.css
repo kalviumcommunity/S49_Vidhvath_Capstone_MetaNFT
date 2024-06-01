@@ -1,63 +1,79 @@
+/* Category.module.css */
+
 .box_category {
-    width: 80%;
-    margin: 0 auto;
-}
-
-.category {
-    padding: 4rem 0;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    padding: 2rem;
+    background: linear-gradient(135deg, #0f0f0f, #1f1f1f);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .category {
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
-}
-
-.category_box {
-    line-height: 0;
-    transition: all .3s ease-in;
-    border-radius: 1rem;
+    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  .category_box {
+    background: #1f1f1f;
+    border: 1px solid #333;
+    border-radius: 12px;
     overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    padding-bottom: 1rem;
-}
-
-.category_box:hover {
-    box-shadow: 0 0 10px 0 darkgrey; /* Adding proper shadow format */
-}
-
-.category_box_img {
-    border-radius: 1rem;
-}
-
-.category_box_title {
+    max-width: 350px;
+  }
+  
+  .category_box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .category_box_img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid #333;
+  }
+  
+  .category_box_title {
     display: flex;
     align-items: center;
     padding: 1rem;
-    gap: 1rem;
-}
-
-.category_box_title span {
-    font-size: 3rem;
-    margin-top: 1rem;
-}
-
-/* Media queries */
-@media screen and (min-width: 320px) and (max-width: 425px) {
-    .box_category {
-        width: 90%;
-    }
-
+  }
+  
+  .category_box_title span {
+    color: #1abc9c;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .category_box_title_info h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #1abc9c;
+  }
+  
+  .category_box_title_info small {
+    color: #ccc;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
     .category {
-        grid-template-columns: 1fr;
+      flex-direction: column;
+      align-items: center;
     }
-}
-
-@media screen and (min-width: 427px) and (max-width: 770px) {
-    .category {
-        grid-template-columns: repeat(2, 1fr);
+  
+    .category_box {
+      width: 100%;
+      max-width: none;
     }
-}
-
-@media screen and (min-width: 772px) and (max-width: 1025px) {
-    .category {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
+  }
+  
