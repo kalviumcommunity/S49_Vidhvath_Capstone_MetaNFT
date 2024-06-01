@@ -1,18 +1,17 @@
-import React from 'react'
+// Title.jsx
 
-//INTERNAL IMPORT
-import Styles from "./Title.module.css";
-import images from "../../img";
+import React from 'react';
+import Styles from './Title.module.css';
 
-const Title = ({ heading, paragraph}) => {
+const Title = ({ heading, paragraph }) => {
   return (
     <div className={Styles.title}>
-        <div className={Styles.title_box}>
-            <h2>{heading}</h2>
-            <p>{paragraph}</p>
-        </div>
+      <div className={Styles.title_box}>
+        <h2>{heading}</h2>
+        <p>{paragraph}</p>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Title
+export default Title;
