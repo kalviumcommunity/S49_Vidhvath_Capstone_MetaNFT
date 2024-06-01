@@ -1,58 +1,84 @@
+/* Brand.module.css */
+
 .Brand {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f5f5f5;
-    padding: 50px;
-  }
-  
+  background: linear-gradient(135deg, #0f0f0f, #1f1f1f);
+  color: #fff;
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Brand_box {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.Brand_box_left {
+  flex: 1 1 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
+.Brand_box_left img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.Brand_box_left h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1abc9c;
+}
+
+.Brand_box_left p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+.Brand_box_left_btn {
+  display: flex;
+  gap: 1rem;
+}
+
+.Brand_box_right {
+  flex: 1 1 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.Brand_box_right img {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .Brand_box {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-  }
-  
-  .Brand_box_left {
-    flex: 1;
-    padding: 30px;
-    display: flex;
     flex-direction: column;
-    justify-content: space-between;
   }
-  
-  .Brand_logo {
-    border-radius: 50%;
-    object-fit: cover;
+
+  .Brand_box_left, .Brand_box_right {
+    flex: 1 1 100%;
+    text-align: center;
   }
-  
-  .Brand_title {
-    margin-top: 20px;
-    font-size: 2.5rem;
-    line-height: 1.2;
-    font-weight: bold;
-    color: #333;
+
+  .Brand_box_left_btn {
+    justify-content: center;
   }
-  
-  .Brand_title_gradient {
-    /* Customize gradient colors and direction for Web3 theme */
-    background: linear-gradient(to right, #48C9B0, #FF758C);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  .Brand_description {
-    font-size: 1.1rem;
-    color: #666;
-    margin-bottom: 20px;
-  }
-  
-  .Brand_buttons {
-    display: flex;
-    gap: 10px;
-  }
-  
+}

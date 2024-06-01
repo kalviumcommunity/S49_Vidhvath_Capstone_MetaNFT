@@ -159,7 +159,9 @@ const openSideBar =()=> {
           
           openSideMenu && (
           <div className={Style.SideBar}>
-            <SideBar setOpenSideMenu={setOpenSideMenu}/>
+            <SideBar setOpenSideMenu={setOpenSideMenu}
+            currentAccount={currentAccount}
+            connectWallet={connectWallet}/>
             </div>
         )
       }

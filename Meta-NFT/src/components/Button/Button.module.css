@@ -1,17 +1,82 @@
-.button{
-    background-color:  #4c5773;
-    padding: 1rem 2rem;
-    border: 1px solid  #4c5773;
-    border-radius: 2.2rem;
-    font-size: 1.1rem;
-    color: darkgrey;
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 1em 2em;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #646cff;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    transition: all .2s ease-in;
-    box-shadow: darkgrey;
-}
-
-.button:hover{
-    background-color: 3ecf0f3;
-    border: 1px solid  #4c5773;
-    color:  #4c5773;
-}
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .button:hover {
+    background-color: #4b50ff;
+  }
+  
+  .button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .button:focus {
+    outline: none;
+  }
+  
+  .button.primary {
+    background-color: #61dafb;
+  }
+  
+  .button.primary:hover {
+    background-color: #47b9d5;
+  }
+  
+  .button.primary:active {
+    background-color: #3a98b8;
+  }
+  
+  .button.secondary {
+    background-color: #2c3e50;
+  }
+  
+  .button.secondary:hover {
+    background-color: #1e2f43;
+  }
+  
+  .button.secondary:active {
+    background-color: #152431;
+  }
+  
+  .button.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .button.icon svg {
+    margin-right: 0.5em;
+  }
+  
+  .button.icon.primary {
+    background-color: #61dafb;
+    color: #ffffff;
+  }
+  
+  .button.icon.secondary {
+    background-color: #2c3e50;
+    color: #ffffff;
+  }
+  
+  

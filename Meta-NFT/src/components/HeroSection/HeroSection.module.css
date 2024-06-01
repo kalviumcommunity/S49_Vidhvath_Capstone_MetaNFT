@@ -1,54 +1,43 @@
-/* General styling for hero section */
-.heroSection {
-    width: 80%;
-    margin: 3rem auto;
-}
+/* HeroSection.module.css */
 
-/* Grid layout for hero section boxes */
-.heroSection_box {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-}
-
-/* Styling for the left box in hero section */
-.heroSection_box_left {
-    padding-right: 2rem;
-}
-
-/* Styling for headings in the left box */
-.heroSection_box_left h1 {
-    font-size: 5rem;
-    line-height: 1;
-    margin-bottom: 2rem; /* Added margin bottom for spacing */
-    font-family: 'Roboto', sans-serif; /* Updated font family */
-}
-
-/* Styling for paragraph in the left box */
-.heroSection_box_left p {
+.HeroSection {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    padding: 8rem 0;
+  }
+  
+  .heroSection_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .heroSection_box_left {
+    flex: 1;
+    padding-right: 4rem;
+  }
+  
+  .heroSection_box_right {
+    flex: 1;
+  }
+  
+  .heroSection_box h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
     margin-bottom: 2rem;
-    font-family: 'Roboto', sans-serif; /* Updated font family */
-}
-
-/* Media query for screens with minimum width of 35em */
-@media screen and (min-width: 35em) {
-    .heroSection {
-        width: 90%; /* Adjusted width for larger screens */
-    }
-}
-
-/* Media query for screens with maximum width of 55em */
-@media screen and (max-width: 55em) {
-    .heroSection_box {
-        grid-template-columns: 1fr; /* Single column layout for smaller screens */
-        gap: 4rem; /* Increased gap for better spacing */
-    }
-    
-    .heroSection_box_left {
-        padding-right: 0; /* Remove right padding on smaller screens */
-    }
-
-    .heroSection_box_left h1 {
-        font-size: 3rem; /* Adjusted font size for smaller screens */
-    }
-}
+  }
+  
+  .heroSection_box p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+  }
+  
+  .heroSection_box_right img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  

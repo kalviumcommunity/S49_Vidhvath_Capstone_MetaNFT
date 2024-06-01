@@ -1,25 +1,43 @@
 /* Title.module.css */
 
 .title {
-    background-color: #0d0d0d; /* Dark background */
-    color: #fff; /* White text for contrast */
-    padding: 80px 20px; /* Padding around the content */
-    text-align: center; /* Center-align text */
+  background: linear-gradient(135deg, #0f0f0f, #1f1f1f);
+  color: #fff;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title_box {
+  max-width: 800px;
+  width: 100%;
+}
+
+.title_box h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1abc9c;
+}
+
+.title_box p {
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title {
+    padding: 1.5rem;
   }
-  
-  .title_box {
-    max-width: 800px;
-    margin: 0 auto; /* Center align the box */
-  }
-  
+
   .title_box h2 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 20px;
+    font-size: 2rem;
   }
-  
+
   .title_box p {
-    font-size: 1.5rem;
-    line-height: 1.6;
+    font-size: 1rem;
   }
-  
+}
