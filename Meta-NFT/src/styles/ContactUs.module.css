@@ -1,108 +1,118 @@
-/* ContactUs.module.css */
-
 .contactus {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .contactus_box {
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .contactus_box h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .contactus_box_box {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  .contactus_box_left {
-    flex: 0 0 50%;
-    padding-right: 20px;
-  }
-  
-  .contactus_box_box_left_item {
-    margin-bottom: 20px;
-  }
-  
-  .contactus_box_box_left_item h3 {
-    color: #555;
-  }
-  
-  .contactus_box_box_left_item p {
-    color: #777;
-  }
-  
-  .contactus_box_box_left_item a {
-    display: inline-block;
-    margin-right: 10px;
-    color: #333;
-    transition: color 0.3s ease;
-  }
-  
-  .contactus_box_box_left_item a:hover {
-    color: #007bff;
-  }
-  
-  .contactus_box_box_right {
-    flex: 0 0 50%;
-    padding-left: 20px;
-  }
-  
-  /* Form.module.css */
-  
-  .Form_box_input {
-    margin-bottom: 20px;
-  }
-  
-  .Form_box_input label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-  }
-  
-  .Form_box_input input[type="text"],
-  .Form_box_input textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-  }
-  
-  .Form_box_input_box {
-    display: flex;
-    align-items: center;
-  }
-  
-  .Form_box_input_box_icon {
-    margin-right: 10px;
-  }
-  
-  /* componentindex.css */
-  
-  .button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .button:hover {
-    background-color: #0056b3;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background-color: #0f0f0f; /* Dark background color */
+  color: #ffffff; /* Text color */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contactus_box {
+  width: 100%;
+  max-width: 800px;
+  background-color: #1a1a1a; /* Darker background */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.contactus_box h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contactus_box_box {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactus_box_left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contactus_box_box_left_item {
+  margin-bottom: 20px;
+}
+
+.contactus_box_left h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.contactus_box_left p {
+  color: #cccccc; /* Lighter text color */
+}
+
+.contactus_box_left a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.8rem;
+  transition: color 0.3s ease;
+  margin-right: 15px;
+}
+
+.contactus_box_left a:hover {
+  color: #0078d4; /* Accent color */
+}
+
+.contactus_box_right {
+  margin-left: 40px;
+}
+
+.form-container {
+  margin-top: 20px;
+}
+
+.form-container label {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #555555; /* Border color */
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  background-color: #222222; /* Darker background for inputs */
+  color: #ffffff;
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+  outline: none;
+  border-color: #0078d4; /* Accent color on focus */
+}
+
+.form-container textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.button-container {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.button-container button {
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: #0078d4; /* Accent color */
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+  background-color: #005a9e; /* Darker accent color on hover */
+}

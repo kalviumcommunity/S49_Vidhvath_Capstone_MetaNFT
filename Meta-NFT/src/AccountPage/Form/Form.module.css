@@ -1,18 +1,27 @@
+/* Form.module.css */
+
 .Form {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #0d0d0d; /* Dark background for sleek look */
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
-  color: #fff; /* White text for contrast */
-  max-width: 800px;
-  margin: 20px auto;
+  height: 100%;
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text */
+  padding: 50px;
 }
 
 .Form_box {
   width: 100%;
+  max-width: 500px;
+  background-color: #1e1e1e; /* Darker background */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.Form_box form {
+  display: flex;
+  flex-direction: column;
 }
 
 .Form_box_input {
@@ -20,90 +29,71 @@
 }
 
 .Form_box_input label {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 1.1em;
-  color: #e91e63; /* Vibrant accent color for labels */
+  font-size: 0.9em;
+  margin-bottom: 5px;
 }
 
+.Form_box_input_userName,
 .Form_box_input input,
 .Form_box_input textarea {
   width: 100%;
   padding: 10px;
-  background-color: #1a1a1a; /* Slightly lighter background for inputs */
-  border: 2px solid #333; /* Subtle border */
+  border: none;
   border-radius: 5px;
-  color: #fff; /* White text for contrast */
-  transition: border 0.3s;
+  background-color: #282828; /* Darker background */
+  color: #e0e0e0; /* Light text */
 }
 
-.Form_box_input input:focus,
-.Form_box_input textarea:focus {
-  border: 2px solid #e91e63; /* Highlight border on focus */
+.Form_box_input_userName::placeholder,
+.Form_box_input input::placeholder,
+.Form_box_input textarea::placeholder {
+  color: #b0b0b0; /* Lighter text */
 }
 
-.Form_box_input_box {
+.Form_box_input_input_box {
   display: flex;
   align-items: center;
 }
 
 .Form_box_input_box_icon {
   margin-right: 10px;
-  font-size: 1.2em;
-  color: #e91e63; /* Icon accent color */
-}
-
-.Form_box_input_input_box {
-  display: flex;
-  align-items: center;
-  background-color: #1a1a1a;
-  padding: 10px;
-  border: 2px solid #333;
-  border-radius: 5px;
-  color: #fff;
-  transition: border 0.3s;
-}
-
-.Form_box_input_input_box input {
-  background-color: transparent; /* Transparent background for nested input */
-  border: none;
-  color: #fff;
-  flex: 1;
-}
-
-.Form_box_input_input_box input:focus {
-  outline: none;
+  color: #ff007a; /* Accent color */
 }
 
 .Form_box_input_social {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.Form_box_input_social input {
+  width: calc(100% - 30px); /* Adjust for icon width */
+}
+
+.Form_box_input_box_icon {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 20px;
+  align-items: center;
+  color: #ff007a; /* Accent color */
+  cursor: pointer;
 }
 
 .Form_box_btn {
-  margin-top: 20px;
   text-align: center;
+  margin-top: 20px;
 }
 
 .button {
-  padding: 10px 30px;
-  background-color: #e91e63; /* Button background color */
+  width: 100%;
+  padding: 10px;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
-  color: #fff;
+  background-color: #ff007a; /* Accent color */
+  color: #fff; /* White text */
   font-size: 1em;
-  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .button:hover {
-  background-color: #c2185b; /* Slightly darker on hover */
-  transform: translateY(-2px); /* Subtle lift effect */
-}
-
-.button:active {
-  background-color: #ad1457; /* Darker on click */
-  transform: translateY(0); /* Reset lift effect */
+  background-color: #ff0055; /* Darker accent color on hover */
 }

@@ -32,16 +32,20 @@ const SideBar = ({setOpenSideMenu}) => {
       link: "author-profile"
     },
     {
-      name: "NFT Details",
-      link: "NFT-details"
+      name: "NFTDetails",
+      link: "NFTDetails"
     },
     {
-      name: "Account Setting",
-      link: "account-setting"
+      name: "Account",
+      link: "Account"
     },
     {
-      name: "Connect Wallet",
-      link: "connect-wallet"
+      name: "ConnectWallet",
+      link: "ConnectWallet"
+    },
+    {
+      name: "UploadNFT",
+      link: "UploadNFT"
     },
     {
       name: "Blog",
@@ -52,12 +56,12 @@ const SideBar = ({setOpenSideMenu}) => {
   //----------------HELP CENTER 
   const helpCenter = [
     {
-      name: "About",
-      link: "about",
+      name: "AboutUs",
+      link: "AboutUs",
     },
     {
-      name: "Contact Us",
-      link: "contact-us",
+      name: "ContactUs",
+      link: "ContactUs",
     },
     {
       name: "Sign Up",
