@@ -1,17 +1,16 @@
 import React from 'react';
 
-// INTERNAL IMPORT
+// INTERNAL IMPORTS
 import Style from '../styles/AboutUs.module.css';
 import { Brand } from '../components/componentindex';
-// import MdImageSearch from '../img/MdImageSearch'; // Assuming MdImageSearch is the correct import
-import image from '../img'; // Assuming this import is needed
+import image from '../img'
 
 const AboutUs = () => {
     const founderArray = [
-        { name: "Vidhvath J", position: "Co-founder and Chief Executive", images: image }, // Assuming image is the correct reference for founder image
-        { name: "Vidhvath J", position: "Co-founder and Chief Executive", images: image },
-        { name: "Vidhvath J", position: "Co-founder and Chief Executive", images: image },
-        { name: "Vidhvath J", position: "Co-founder and Chief Executive", images: image },
+        { name: "Vidhvath J", position: "Co-founder and Chief Executive", },
+        { name: "John Doe", position: "Co-founder and CTO",  },
+        { name: "Jane Smith", position: "Chief Marketing Officer",  },
+        { name: "Alex Johnson", position: "Chief Operating Officer",  },
     ];
 
     const factsArray = [
@@ -20,12 +19,12 @@ const AboutUs = () => {
             info: "Articles have been published around the world (as of Sept. 30)",
         },
         {
-            title: "10 million",
-            info: "Articles have been published around the world (as of Sept. 30)",
+            title: "20 million",
+            info: "Downloads of our mobile app (as of Sept. 30)",
         },
         {
-            title: "10 million",
-            info: "Articles have been published around the world (as of Sept. 30)",
+            title: "30 million",
+            info: "Social media followers across all platforms (as of Sept. 30)",
         },
     ];
 
@@ -38,7 +37,7 @@ const AboutUs = () => {
                         <p>We're impartial and independent, and every day we create distinctive, content which informs, educates, and entertains millions of people around the world.</p>
                     </div>
                     <div className={Style.aboutus_box_hero_right}>
-                        <img src={MdImageSearch.hero2} alt="" />
+                        
                     </div>
                 </div>
                 <div className={Style.aboutus_box_title}>
@@ -47,11 +46,11 @@ const AboutUs = () => {
                 </div>
                 <div className={Style.aboutus_box_founder}>
                     <div className={Style.aboutus_box_founder_box}>
-                        {founderArray.map((el, i) => (
-                            <div className={Style.aboutus_box_founder_box_img} key={i}>
-                                <img src={el.images} alt={el.name} width={500} height={500} className={Style.aboutus_box_founder_box_img_img} />
-                                <h3>{el.name}</h3>
-                                <p>{el.position}</p>
+                        {founderArray.map((founder, index) => (
+                            <div className={Style.aboutus_box_founder_box_img} key={index}>
+                                <img src={founder.image} alt={founder.name} width={500} height={500} className={Style.aboutus_box_founder_box_img_img} />
+                                <h3>{founder.name}</h3>
+                                <p>{founder.position}</p>
                             </div>
                         ))}
                     </div>
@@ -62,10 +61,10 @@ const AboutUs = () => {
                 </div>
                 <div className={Style.aboutus_box_facts}>
                     <div className={Style.aboutus_box_facts_box}>
-                        {factsArray.map((el, i) => (
-                            <div className={Style.aboutus_box_facts_box_info} key={i}>
-                                <h3>{el.title}</h3>
-                                <p>{el.info}</p>
+                        {factsArray.map((fact, index) => (
+                            <div className={Style.aboutus_box_facts_box_info} key={index}>
+                                <h3>{fact.title}</h3>
+                                <p>{fact.info}</p>
                             </div>
                         ))}
                     </div>

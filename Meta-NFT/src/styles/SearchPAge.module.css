@@ -1,0 +1,85 @@
+/* SearchPage.module.css */
+
+.searchpage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #121212; /* Dark background for the main container */
+    color: #ffffff; /* Light text for contrast */
+    gap: 20px;
+  }
+  
+  .searchpage > div {
+    width: 100%;
+  }
+  
+  .searchpage .banner {
+    margin-bottom: 20px;
+  }
+  
+  .searchpage .filter {
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .searchpage .slider {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .searchpage .brand {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  /* Component Specific Styling */
+  .banner img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .banner img:hover {
+    transform: scale(1.05);
+  }
+  
+  .filter {
+    background-color: #1e1e1e; /* Slightly lighter dark background for distinction */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+  }
+  
+  .slider {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+  }
+  
+  .brand {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .searchpage {
+      padding: 10px;
+    }
+  
+    .banner img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .filter, .slider, .brand {
+      padding: 10px;
+    }
+  }
+  

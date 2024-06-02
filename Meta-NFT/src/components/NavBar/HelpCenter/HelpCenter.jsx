@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 const HelpCenter = () => {
   const helpCenter = [
     {
-      name: "About",
+      name: "AboutUs",
       
     },
     {

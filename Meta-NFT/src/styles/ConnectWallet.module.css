@@ -1,66 +1,83 @@
+/* ConnectWallet.module.css */
+
 .ConnectWallet {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #1a1a1a;
-    color: #ffffff;
-    font-family: 'Roboto', sans-serif;
-}
-
-.ConnectWallet_box {
-    background: #262626;
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    padding: 40px;
-    text-align: center;
-    max-width: 500px;
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text */
+    font-family: 'Roboto', sans-serif; /* Google Font */
+  }
+  
+  .ConnectWallet_box {
+    max-width: 600px;
     width: 100%;
-}
-
-.ConnectWallet_box h1 {
+    background-color: #1e1e1e; /* Darker background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .ConnectWallet_box h1 {
+    font-size: 2.5em;
     margin-bottom: 20px;
-    font-size: 24px;
-}
-
-.ConnectWallet_box_para {
+    color: #ffffff; /* Light text */
+  }
+  
+  .ConnectWallet_box_para {
+    font-size: 1.2em;
     margin-bottom: 30px;
-    color: #a0a0a0;
-}
-
-.ConnectWallet_box_provider {
+    color: #cccccc; /* Lighter text */
+  }
+  
+  .ConnectWallet_box_provider {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+  }
+  
+  .ConnectWallet_box_provider_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-}
-
-.ConnectWallet_box_provider_item {
-    background: #333333;
+    padding: 20px;
     border-radius: 10px;
-    padding: 15px;
-    width: 100px;
-    text-align: center;
     cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.ConnectWallet_box_provider_item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.ConnectWallet_box_provider_item_img {
-    border-radius: 50%;
+    transition: all 0.3s ease;
+    background-color: #282828; /* Darker background */
+    border: 2px solid transparent;
+  }
+  
+  .ConnectWallet_box_provider_item:hover,
+  .ConnectWallet_box_provider_item.active {
+    border-color: #29b6af; /* Accent color */
+  }
+  
+  .ConnectWallet_box_provider_item_img {
+    width: 50px;
+    height: 50px;
     margin-bottom: 10px;
-}
-
-.ConnectWallet_box_provider_item p {
-    margin: 0;
-    font-size: 14px;
-    color: #fff;
-}
-
-.active {
-    border: 2px solid #0070f3;
-}
+  }
+  
+  .ConnectWallet_box_provider_item p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffffff; /* Light text */
+  }
+  
+  @media (max-width: 768px) {
+    .ConnectWallet_box {
+      padding: 20px;
+    }
+    
+    .ConnectWallet_box h1 {
+      font-size: 2em;
+    }
+    
+    .ConnectWallet_box_para {
+      font-size: 1em;
+    }
+  }
+  

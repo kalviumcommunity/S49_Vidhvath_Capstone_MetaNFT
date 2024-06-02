@@ -21,13 +21,13 @@ export const Discover = () => {
       name: "Collection",
     },
     {
-      name: "AuthorProfile",
+      name: "Author",
     },
     {
-      name: "NFTdetails",
+      name: "NFTDetails",
     },
     {
-      name: "Account_Setting",
+      name: "Account",
     },
     {
       name: "UploadNFT"

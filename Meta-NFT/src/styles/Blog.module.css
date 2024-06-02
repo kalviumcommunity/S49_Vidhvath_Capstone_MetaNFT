@@ -1,0 +1,130 @@
+/* Blog container */
+.blog {
+    background-color: #1a1a1a;
+    color: #ccc;
+    padding: 40px 20px;
+  }
+  
+  /* Blog box */
+  .blog_box {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  /* Heading styles */
+  .blog_box_heading h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .blog_box_heading p {
+    font-size: 1.1rem;
+    color: #ccc;
+    line-height: 1.6;
+  }
+  
+  /* Mission section styles */
+  .blog_box_mission h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .blog_box_mission p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+  }
+  
+  /* Content section styles */
+  .blog_box_content h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .blog_box_content_list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .blog_box_content_item h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .blog_box_content_item p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+  }
+  
+  /* Involved section styles */
+  .blog_box_involved h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .blog_box_involved p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+  }
+  
+  /* Connect section styles */
+  .blog_box_connect h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .blog_box_connect ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .blog_box_connect ul li {
+    margin-bottom: 10px;
+  }
+  
+  .blog_box_connect ul li a {
+    font-size: 1rem;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .blog_box_connect ul li a:hover {
+    color: #0056b3;
+  }
+  
+  /* Stay tuned section styles */
+  .blog_box_stay_tuned h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .blog_box_stay_tuned p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+  }
+  
+  .blog_box_stay_tuned p:last-child {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .blog_box_stay_tuned p:last-child span {
+    font-style: italic;
+  }
+  

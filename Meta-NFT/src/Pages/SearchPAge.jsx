@@ -1,10 +1,9 @@
 import React from 'react';
 import { Slider, Brand, Filter } from '../components/componentindex';
-
 import { Banner } from '../CollectionPage/Collectionindex';
 
 // INTERNAL IMPORT
-import Style from '../styles/SearchPAge.module.css';  // Corrected the typo in the file name
+import Style from '../styles/SearchPAge.module.css';  // Ensure the path is correct
 import images from '../img';  // Ensure this is the correct path to your images object
 
 const Search = () => {
@@ -18,7 +17,6 @@ const Search = () => {
     <div className={Style.searchpage}>
       <Banner bannerImage={images.creatorbackground2} />
       <Filter />
-      
       <Slider />
       <Brand />
     </div>

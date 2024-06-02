@@ -4,6 +4,10 @@ import { NavBar, Footer } from '../components/componentindex'
 import Style from "../styles/Landing.module.css";
 import { HeroSection, Service, BigNFTSlider, Subscribe, Title, Category, Filter, NFTCard, Collection, FollowerTab, AudioLive, Brand, Slider, Video} from '../components/componentindex';
 import { Route,Routes } from 'react-router-dom';
+import ContactUs from './ContactUs';
+
+
+
 
 
 
@@ -19,6 +23,7 @@ const Landing =() => {
   
    
    <div className={StylePropertyMap.homepage}>
+     
       <HeroSection />
       <Service/>
       <BigNFTSlider/>

@@ -1,16 +1,53 @@
 /* Collection.module.css */
 
 .collection {
-    background-color: #0d0d0d; /* Dark background */
-    color: #fff; /* White text for contrast */
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #121212; /* Dark background for the main container */
+  color: #ffffff; /* Light text for contrast */
+  gap: 20px;
+}
+
+.collection > div {
+  width: 100%;
+}
+
+.collection .banner {
+  margin-bottom: 20px;
+}
+
+.collection .collectionProfile {
+  margin-bottom: 20px;
+}
+
+.collection .NFTCardtwo {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.collection .filter {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.collection .brand {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .collection {
+    padding: 10px;
   }
-  
-  .collection > * {
-    margin-bottom: 20px;
+
+  .collection .NFTCardtwo {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .collection > :last-child {
-    margin-bottom: 0;
-  }
-  
+}
