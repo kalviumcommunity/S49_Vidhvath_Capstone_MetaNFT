@@ -1,43 +1,123 @@
+/* General styles */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #1a1a1d;
+  color: #e6e6e6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Subscription page container */
 .subscription {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .Subscription_box {
-    max-width: 800px;
-    width: 100%;
-    background-color: #f8f9fa; /* Light gray background */
-    border-radius: 20px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-  }
-  
-  .Subscription_box_info h1 {
-    font-size: 36px;
-    font-weight: bold;
-    color: #333333; /* Dark text color */
-    margin-bottom: 20px;
-  }
-  
-  .Subscription_box_info p {
-    font-size: 18px;
-    color: #666666; /* Medium gray text color */
-    margin-bottom: 40px;
-  }
-  
-  .Subscription_box_box {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-  }
-  
-  /* Responsive styling for subscription boxes */
-  @media (max-width: 768px) {
-    .Subscription_box_box {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Subscription box */
+.subscriptionBox {
+  max-width: 1200px;
+  width: 100%;
+  background: linear-gradient(145deg, #2a2a2e, #1a1a1d);
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  text-align: center;
+  color: #e6e6e6;
+}
+
+/* Subscription box header */
+.subscriptionBoxInfo {
+  margin-bottom: 40px;
+}
+
+.subscriptionBoxInfo h1 {
+  font-size: 3rem;
+  color: #ff6a3d;
+  margin-bottom: 10px;
+}
+
+.subscriptionBoxInfo p {
+  font-size: 1.2rem;
+  color: #e6e6e6;
+}
+
+/* Subscription plans container */
+.subscriptionBoxBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Individual subscription box */
+.SubscriptionBox {
+  flex: 1 1 300px;
+  max-width: 300px;
+  background: #2a2a2e;
+  border-radius: 20px;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.SubscriptionBox:hover {
+  transform: scale(1.05);
+}
+
+/* Plan name */
+.SubscriptionBox_box_span {
+  font-size: 1.8rem;
+  color: #ff6a3d;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Popular tag */
+.Subscription_box_small {
+  display: block;
+  font-size: 0.9rem;
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+/* Price */
+.SubscriptionBox_box_small_para {
+  font-size: 1.5rem;
+  color: #e6e6e6;
+  margin-bottom: 20px;
+}
+
+/* Service list */
+.SubscriptionBox_box_info {
+  margin-bottom: 20px;
+}
+
+.SubscriptionBox_box_info_para {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.SubscriptionBox_box_info_para span {
+  margin-right: 10px;
+  color: #4caf50;
+}
+
+/* Button */
+.Button {
+  background-color: #ff6a3d;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.Button:hover {
+  background-color: #ff4a1d;
+}

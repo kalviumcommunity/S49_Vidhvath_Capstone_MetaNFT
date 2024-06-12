@@ -27,10 +27,7 @@ const SideBar = ({setOpenSideMenu}) => {
       name: "Search",
       link: "search"
     },
-    {
-      name: "Author Profile",
-      link: "author-profile"
-    },
+  
     {
       name: "NFTDetails",
       link: "NFTDetails"
@@ -72,8 +69,8 @@ const SideBar = ({setOpenSideMenu}) => {
       link: "sign-in",
     },
     {
-      name: "Subscription",
-      link: "subscription",
+      name: "SubscriptionPage",
+      link: "SubscriptionPage",
     },
   ];
 
@@ -104,10 +101,10 @@ const closeSideBar = ()=> {
         <img src={images.logo1} alt="logo" width={150}  height={150} />
         <p>Discover the most outstanding articles on all topices of NFT own stories and share them  </p>
         <div className={Style.sideBar_social}>
-          <a href="#">
-            <TiSocialFacebook/>
+          <a href="https://www.youtube.com/channel/UChoM8rve8i-zZkWzlr2HFAQ">
+            <TiSocialYoutube/>
           </a>
-          <a href="#">
+          <a href="https://www.linkedin.com/in/vidhvath-j/">
             <TiSocialLinkedin/>
           </a>
           <a href="#">
@@ -115,6 +112,9 @@ const closeSideBar = ()=> {
           </a>
           <a href="#">
             <TiSocialInstagram/>
+          </a>
+          <a href="https://x.com/VidhvathJ">
+            <TiSocialTwitter/>
           </a>
         </div>
 
@@ -165,8 +165,12 @@ const closeSideBar = ()=> {
       </div>
 
       <div className={Style.sideBar_button}>
+
+        
         <Button btnName = "Create" handleClick={() => {}}/>
-        <Button btnName = "Connect Wallet" handleClick={()=> {}}/>
+        <Link to="/ConnectWallet">
+      <button>Connect Wallet</button>
+    </Link>
       </div>
     </div>
   );

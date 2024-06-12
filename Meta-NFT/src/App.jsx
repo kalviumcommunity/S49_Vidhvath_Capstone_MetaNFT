@@ -13,6 +13,8 @@ import Search from './Pages/SearchPAge'
 import Blog from './Pages/Blog';
 import Account from './Pages/Account';
 import UploadNFT from './Pages/UploadNFT'
+import AboutUs from './Pages/AboutUs';
+import SubscriptionPage from './Pages/SubscriptionPage';
 
 
 
@@ -32,7 +34,8 @@ const MyApp =() => {
       <Route path="/Account" element={<Account/>}/>
       <Route path="/UploadNFT" element={<UploadNFT/>}/>
       <Route path="/ContactUs" element={<ContactUs/>}/>
-      
+      <Route path="/AboutUs" element={<AboutUs/>}/>
+      <Route path="/SubscriptionPage" element={<SubscriptionPage/>} />
       
       
 

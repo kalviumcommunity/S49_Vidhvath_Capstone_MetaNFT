@@ -22,15 +22,15 @@ const Footer = () => {
                             <TiSocialFacebook/>
 
                         </a>
-                        <a href="#">
+                        <a href="https://www.linkedin.com/in/vidhvath-j/">
                             <TiSocialLinkedin/>
 
                         </a>
-                        <a href="#">
+                        <a href="https://x.com/VidhvathJ">
                             <TiSocialTwitter/>
 
                         </a>
-                        <a href="#">
+                        <a href="https://www.youtube.com/channel/UChoM8rve8i-zZkWzlr2HFAQ">
                             <TiSocialYoutube/>
 
                         </a>

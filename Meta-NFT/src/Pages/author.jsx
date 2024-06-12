@@ -1,52 +1,28 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react';
 
-//INTERNAL IMPORT
-import Style from "../styles/author.module.css";
-import { Banner } from '../CollectionPage/Collectionindex'
-import { Brand, FollowerTab, Title } from '../components/componentindex'
-import images from '../img'
-import { Discover } from '../components/NavBar';
-import {AuthorProfileCard, AuthorTaps,  AuthorNFTCardBox} from "../authorPage/componentindex"
 
-const author = () => {
-    const popularArray = [
-        images.user1,
-        images.user2,
-        images.user3,
-        images.user4,
-        images.user5,
-        images.user6,
-        images.user7,
-        images.user8,
-    ]
-
-    const [collectiables, setCollection] = useState(true);
-    const [created, setCreated] = useState(false);
-    const [like, setlike] = useState(false);
-    const [follower, setfollower] = useState(false);
-    const [following, setFollowing] = useState(false);
+const AuthorPage = ({ author }) => {
   return (
-        <div className={Style.banner}>
-            <Banner bannerImage={images.creatorbackground2}/>
-            <AuthorProfileCard />
-            <AuthorTaps 
-            collectiables={setcollectiables} 
-            like={setLike} 
-            follower={setFollower}
-            following={setfollowing}/>
-            <AuthorNFTCardBox 
-            collectiables={collectiables} 
-            created={created}
-            like = {like}
-            follower={follower}
-            following={following}/>
-           <Title heading="Popular Creators" paragraph="Click on music icon and enjoy NFT music or audio" />
-           {popularArray.map((el, i)=> (
-            <FollowerTab key={i + 1} i={i} el={el}/>
-           ))}
-           <Brand/>
+    <div className={Style.authorPage}>
+      <div className={Style.authorProfile}>
+        <img src={author.profilePicture} alt={author.name} className={Style.profilePicture} />
+        <h1 className={Style.authorName}>{author.name}</h1>
+        <p className={Style.authorBio}>{author.bio}</p>
+      </div>
+      <div className={Style.authorNFTs}>
+        <h2>Created NFTs</h2>
+        <div className={Style.nftGrid}>
+          {author.nfts.map((nft, index) => (
+            <div key={index} className={Style.nftCard}>
+              <img src={nft.image} alt={nft.title} className={Style.nftImage} />
+              <h3 className={Style.nftTitle}>{nft.title}</h3>
+              <p className={Style.nftDescription}>{nft.description}</p>
+            </div>
+          ))}
         </div>
-  )
-}
+      </div>
+    </div>
+  );
+};
 
-export default author
+export default AuthorPage;

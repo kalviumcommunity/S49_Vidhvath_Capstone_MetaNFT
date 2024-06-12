@@ -23,7 +23,7 @@ const HelpCenter = () => {
       
     },
     {
-      name: "Subscription",
+      name: "SubscriptionPage",
       
     },
   ];
