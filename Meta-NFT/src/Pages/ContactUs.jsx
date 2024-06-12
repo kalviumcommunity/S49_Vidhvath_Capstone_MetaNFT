@@ -14,26 +14,23 @@ const ContactUs = () => {
         <h1>Contact</h1>
         <div className={Style.contactus_box_box}>
           <div className={Style.contactus_box_left}>
-            <div className={Style.contactus_box_box_left_item}>
-              <h3>ADDRESS</h3>
-              <p>photo booth tattooed prism , portland taiyaki hoodie neural typewriter</p>
-            </div>
+           
             <div className={Style.contactus_box_box_left_item}>
               <h3>EMAIL</h3>
-              <p>nc.example@example.com</p>
+              <p>vidhvathj.2005@gmail.com</p>
             </div>
             <div className={Style.contactus_box_box_left_item}>
               <h3>Phone</h3>
-              <p>000-123-456</p>
+              <p>+91 9036272250</p>
             </div>
             <div className={Style.contactus_box_box_left_item}>
               <h3>Socials</h3>
               <div className={Style.social_icons}>
                 <a href="#"><TiSocialFacebook /></a>
                 <a href="#"><TiSocialInstagram /></a>
-                <a href="#"><TiSocialYoutube /></a>
-                <a href="#"><TiSocialLinkedin /></a>
-                <a href="#"><TiSocialTwitter /></a>
+                <a href="https://www.youtube.com/channel/UChoM8rve8i-zZkWzlr2HFAQ"><TiSocialYoutube /></a>
+                <a href="https://www.linkedin.com/in/vidhvath-j/"><TiSocialLinkedin /></a>
+                <a href="https://x.com/VidhvathJ"><TiSocialTwitter /></a>
               </div>
             </div>
           </div>
@@ -41,7 +38,7 @@ const ContactUs = () => {
             <form>
               <div className={formStyle.Form_box_input}>
                 <label htmlFor="name">Username</label>
-                <input type="text" placeholder='Vidhvath J' className={formStyle.Form_box_input_userName} />
+                <input type="text" placeholder='enter your name ' className={formStyle.Form_box_input_userName} />
               </div>
               <div className={formStyle.Form_box_input}>
                 <label htmlFor="email">Email</label>

@@ -20,9 +20,7 @@ export const Discover = () => {
     {
       name: "Collection",
     },
-    {
-      name: "Author",
-    },
+
     {
       name: "NFTDetails",
     },

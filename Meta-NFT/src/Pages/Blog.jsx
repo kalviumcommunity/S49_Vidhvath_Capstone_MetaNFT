@@ -52,9 +52,9 @@ const Blog = () => {
         <div className={Style.blog_box_connect}>
           <h2>Connect with Us</h2>
           <ul>
-            <li><a href="#">Website</a></li>
-            <li><a href="mailto:contact@nftmarketplace.com">Email</a></li>
-            <li><a href="#">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/vidhvath-j/">Linkin</a></li>
+            <li><a href="mailto:vidhvathj.2005@gmail.com">Email</a></li>
+            <li><a href="https://x.com/VidhvathJ">Twitter</a></li>
             <li><a href="#">Instagram</a></li>
             <li><a href="#">Facebook</a></li>
           </ul>
@@ -63,7 +63,7 @@ const Blog = () => {
           <h2>Stay Tuned!</h2>
           <p>Thank you for visiting our blog. We're excited to embark on this journey with you as we explore the limitless possibilities of NFTs. Stay tuned for inspiring stories, valuable insights, and a celebration of creativity in the digital age.</p>
           <p>Happy collecting!</p>
-          <p>The [Your NFT Marketplace] Team</p>
+          <p>The MetaNFT </p>
         </div>
       </div>
     </div>
