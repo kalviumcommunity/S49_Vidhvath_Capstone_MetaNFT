@@ -5,6 +5,7 @@ import Style from "../styles/Landing.module.css";
 import { HeroSection, Service, BigNFTSlider, Subscribe, Title, Category, Filter, NFTCard, Collection, FollowerTab, AudioLive, Brand, Slider, Video} from '../components/componentindex';
 import { Route,Routes } from 'react-router-dom';
 import SubscriptionPage from './SubscriptionPage'
+import nfts from '../components/backend/backend'
 
 
 
@@ -21,6 +22,7 @@ const Landing =() => {
  return (
    <div>
    <NavBar />
+   <nfts/>
    
   
 
