@@ -43,6 +43,10 @@ If you have any questions or encounter any issues while using MetaNFT, feel free
 
 Thank you for choosing MetaNFT. Let's revolutionize NFT marketing together! 🚀
 
+Deployed link : https://666acc977c1441e05ec64fd8--sparkly-platypus-e3cd97.netlify.app/
+
+Figma Prototype : https://www.figma.com/proto/KL9jD5tBuW3bEwoRdkZzo5/Capstone-Project--%3E-High-fid-Design(MetaNFT)?page-id=0%3A1&node-id=9-10611&viewport=6595%2C7170%2C0.07&t=N1mVNta3ZYYTBLtm-1&scaling=min-zoom&starting-point-node-id=12%3A4437
+
 
 
 ---
