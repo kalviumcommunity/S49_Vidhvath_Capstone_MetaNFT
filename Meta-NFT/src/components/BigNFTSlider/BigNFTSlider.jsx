@@ -1,16 +1,40 @@
+import React, { useState, useCallback } from 'react';
+import { AiFillFire, AiFillHeart } from 'react-icons/ai';
+import { MdVerified, MdTimer } from 'react-icons/md';
+import { TbArrowBigLeftLines, TbArrowBigRightLine } from 'react-icons/tb';
 
-import React, {useState, useEffect, useCallback } from 'react';
-import {AiFillFire, AiFillHeart, AiOutlineBehanceSquare} from 'react-icons/ai';
-import {MdVerified, MdTimer} from 'react-icons/md';
-import {TbArrowBigLeftLines, TbArrowBigRightLine} from 'react-icons/tb';
-
-//INTERNAL IMPORT
+// INTERNAL IMPORT
 import Style from './BigNFTSlider.module.css';
 import images from '../../img';
-import Button from '../Button/Button';  
+import Button from '../Button/Button';
+
+// Modal Component
+const Modal = ({ isOpen, onClose, title, bidDetails }) => {
+  if (!isOpen) return null;
+
+  return (
+    <div className={Style.modalOverlay}>
+      <div className={Style.modalContent}>
+        <h3>{title}</h3>
+        <p>Your bid has been placed!</p>
+        <div>
+          <strong>Bid Details:</strong>
+          <ul>
+            <li>Item: {bidDetails.title}</li>
+            <li>Bid Amount: {bidDetails.price}</li>
+            <li>Placed By: {bidDetails.name}</li>
+            <li>Collection: {bidDetails.collection}</li>
+          </ul>
+        </div>
+        <button onClick={onClose}>Close</button>
+      </div>
+    </div>
+  );
+};
 
 function BigNFTSlider() {
   const [idNumber, setIdNumber] = useState(0);
+  const [modalOpen, setModalOpen] = useState(false);
   const sliderData = [
     {
       title: "Hello NFT",
@@ -21,13 +45,12 @@ function BigNFTSlider() {
       like: 243,
       image: images.user1,
       nftImages: images.nft_image_1,
-      time:{
+      time: {
         days: 27,
         hours: 10,
         minutes: 11,
-        seconds:12
+        seconds: 12
       }
-
     },
     {
       title: "Hello Universe",
@@ -38,13 +61,12 @@ function BigNFTSlider() {
       like: 243,
       image: images.user2,
       nftImages: images.nft_image_2,
-      time:{
+      time: {
         days: 27,
         hours: 10,
         minutes: 11,
-        seconds:12
+        seconds: 12
       }
-
     },
     {
       title: "Hello Space",
@@ -55,15 +77,13 @@ function BigNFTSlider() {
       like: 243,
       image: images.user3,
       nftImages: images.nft_image_3,
-      time:{
+      time: {
         days: 27,
         hours: 10,
         minutes: 11,
-        seconds:12
+        seconds: 12
       }
-
     },
-
     {
       title: "Hello Creators",
       id: 4,
@@ -73,35 +93,39 @@ function BigNFTSlider() {
       like: 243,
       image: images.user4,
       nftImages: images.nft_image_1,
-      time:{
+      time: {
         days: 27,
         hours: 10,
         minutes: 11,
-        seconds:12
+        seconds: 12
       }
-
     }
-  ]
+  ];
 
-  //....INC 
-const inc = useCallback(()=> {
-  if (idNumber + 1 <sliderData.length) {
-    setIdNumber(idNumber + 1);
+  // Increment Function
+  const inc = useCallback(() => {
+    if (idNumber + 1 < sliderData.length) {
+      setIdNumber(idNumber + 1);
+    }
+  }, [idNumber, sliderData.length]);
 
-  }
-}, [idNumber, sliderData.length] );
-
-
-  //....DEC
-  const dec = useCallback(()=> {
+  // Decrement Function
+  const dec = useCallback(() => {
     if (idNumber > 0) {
       setIdNumber(idNumber - 1);
-  
     }
-  }, [idNumber] );
+  }, [idNumber]);
 
-  
-  
+  // Handle Place Button Click
+  const handlePlaceClick = () => {
+    setModalOpen(true);
+  };
+
+  // Handle Close Modal
+  const handleCloseModal = () => {
+    setModalOpen(false);
+  };
+
   return (
     <div className={Style.bigNFTSlider}>
       <div className={Style.bigNFTSlider_box}>
@@ -109,80 +133,80 @@ const inc = useCallback(()=> {
           <h2>{sliderData[idNumber].title}</h2>
           <div className={Style.bigNFTSlider_box_left_creator}>
             <div className={Style.bigNFTSlider_box_left_creator_profile}>
-              <img className= {Style.bigNFTSlider_box_left_creator_profile_img}src={sliderData[idNumber].image} alt="profile image" width={50} height={50} />
-              <div className={Style.bigNFTSlider_box_left_creator_profile_img}>
+              <img className={Style.bigNFTSlider_box_left_creator_profile_img} src={sliderData[idNumber].image} alt="profile" width={50} height={50} />
+              <div>
                 <p>Creator</p>
-                <h4>{sliderData[idNumber].name} <span><MdVerified/></span></h4>
+                <h4>{sliderData[idNumber].name} <span><MdVerified /></span></h4>
               </div>
             </div>
             <div className={Style.bigNFTSlider_box_left_creator_collection}>
-              <AiFillFire className={Style.bigNFTSlider_box_left_creator_icon}/>
+              <AiFillFire className={Style.bigNFTSlider_box_left_creator_icon} />
               <div className={Style.bigNFTSlider_box_left_creator_collection_info}>
-                <p>collection</p>
+                <p>Collection</p>
                 <h4>{sliderData[idNumber].collection}</h4>
-
               </div>
             </div>
           </div>
           <div className={Style.bigNFTSlider_box_left_bidding}>
-            <div className={Style.bigNFTSlider_box_left_biddding_box}>
-              <small>Current Bid </small>
+            <div>
+              <small>Current Bid</small>
               <p>{sliderData[idNumber].price} <span>$,221,21</span></p>
             </div>
             <p className={Style.bigNFTSlider_box_left_bidding_box_timer}>
-              <MdTimer className={Style.bigNFTSlider_box_left_biddding_box_icon}
-              />
+              <MdTimer className={Style.bigNFTSlider_box_left_biddding_box_icon} />
               <span>Auction ending in</span>
             </p>
-
             <div className={Style.bigNFTSlider_box_left_bidding_box_timer}>
-    <div className={Style.bigNFTSlider_box_left_bidding_box_timer}>
-        <p>{sliderData[idNumber].time.days}</p>
-        <span>Days</span>
-    </div>
-
-    <div className={Style.bigNFTSlider_box_left_bidding_box_timer}>
-        <p>{sliderData[idNumber].time.hours}</p>
-        <span>Hours</span>
-    </div>
-
-    <div className={Style.bigNFTSlider_box_left_bidding_box_timer}>
-        <p>{sliderData[idNumber].time.minutes}</p>
-        <span>mins</span>
-    </div>
-
-    <div className={Style.bigNFTSlider_box_left_bidding_box_timer}>
-        <p>{sliderData[idNumber].time.seconds}</p>
-        <span>secs</span>
-    </div>
-</div>
-
+              <div>
+                <p>{sliderData[idNumber].time.days}</p>
+                <span>Days</span>
+              </div>
+              <div>
+                <p>{sliderData[idNumber].time.hours}</p>
+                <span>Hours</span>
+              </div>
+              <div>
+                <p>{sliderData[idNumber].time.minutes}</p>
+                <span>mins</span>
+              </div>
+              <div>
+                <p>{sliderData[idNumber].time.seconds}</p>
+                <span>secs</span>
+              </div>
+            </div>
             <div className={Style.bigNFTSlider_box_left_button}>
-              <Button btnName="Place" handleClick={() => {}}/>
-              <Button btnName="View" handleClick={()=> {}}/>
-
+              <Button btnName="Place" handleClick={handlePlaceClick} />
+              <Button btnName="View" handleClick={() => {}} />
             </div>
           </div>
           <div className={Style.bigNFTSlider_box_left_sliderBtn}>
-            <TbArrowBigLeftLines className={Style.bigNFTSlider_box_left_sliderBtn_icon}
-            onClick={()=>  dec()}/>
-
-            <TbArrowBigRightLine className={Style.bigNFTSlider_box_left_sliderBtn_icon}
-            onClick={()=>  inc()}/>
+            <TbArrowBigLeftLines className={Style.bigNFTSlider_box_left_sliderBtn_icon} onClick={dec} />
+            <TbArrowBigRightLine className={Style.bigNFTSlider_box_left_sliderBtn_icon} onClick={inc} />
           </div>
         </div>
         <div className={Style.bigNFTSlider_box_right}>
           <div className={Style.bigNFTSlider_box_right_box}>
-            <img src={sliderData[idNumber].nftImages} alt="NFT IMAGE" className={Style.bigNFTSlider_box_right_box_img}/>
+            <img src={sliderData[idNumber].nftImages} alt="NFT" className={Style.bigNFTSlider_box_right_box_img} />
             <div className={Style.bigNFTSlider_box_right_box_like}>
-              <AiFillHeart/>
+              <AiFillHeart />
               <span>{sliderData[idNumber].like}</span>
             </div>
           </div>
         </div>
       </div>
+      <Modal
+        isOpen={modalOpen}
+        onClose={handleCloseModal}
+        title={sliderData[idNumber].title}
+        bidDetails={{
+          title: sliderData[idNumber].title,
+          price: sliderData[idNumber].price,
+          name: sliderData[idNumber].name,
+          collection: sliderData[idNumber].collection,
+        }}
+      />
     </div>
-  )
+  );
 }
 
-export default BigNFTSlider
+export default BigNFTSlider;
