@@ -1,53 +1,36 @@
-import React from 'react';
-//INTERNAL IMPORT
-import Style from './Discover.module.css'
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { Dropdown, Menu } from 'antd';
 import { useNavigate } from 'react-router-dom';
+import Style from './Discover.module.css';
+
 export const Discover = () => {
-
-  const [selectedcomponent,setselectedcomponent]=useState("");
+  const [selectedComponent, setSelectedComponent] = useState("");
   const navigate = useNavigate();
-  const handleChange = (e) =>{
-    setselectedcomponent(e.target.value);
-    navigate(e.target.value)
-  }
 
-  //-----------DISCOVER NAVIGATION MENU
-  const discover = [
-    {
-      name: "Search",
-    },
-    {
-      name: "Collection",
-    },
+  const handleMenuClick = (e) => {
+    setSelectedComponent(e.key);
+    navigate(e.key);
+  };
 
-    {
-      name: "NFTDetails",
-    },
-    {
-      name: "Account",
-    },
-    {
-      name: "UploadNFT"
-    },
-    {
-      name: "ConnectWallet",
-    },
-    {
-      name: "Blog",
-    },
-  ];
-  return (
-    <div onChange={handleChange} defaultValue={selectedcomponent} className={Style.box}>
-       <select style={{ border: 'none' }}>
-      {discover.map((el, i) => (
-           <option>{el.name}</option>
-       
-      ))}
-      </select>
-    </div>
-    
-    
+  const discoverMenu = (
+    <Menu onClick={handleMenuClick}>
+      <Menu.Item key="Search">Search</Menu.Item>
+      <Menu.Item key="Collection">Collection</Menu.Item>
+      <Menu.Item key="NFTDetails">NFT Details</Menu.Item>
+      <Menu.Item key="Account">Account</Menu.Item>
+      <Menu.Item key="UploadNFT">Upload NFT</Menu.Item>
+      <Menu.Item key="ConnectWallet">Connect Wallet</Menu.Item>
+      <Menu.Item key="Blog">Blog</Menu.Item>
+    </Menu>
   );
-;}
 
+  return (
+    <div className={Style.box}>
+      <Dropdown overlay={discoverMenu} trigger={['click']}>
+        <a onClick={(e) => e.preventDefault()}>
+          {selectedComponent} <span style={{ marginLeft: 8 }}>Discover </span>
+        </a>
+      </Dropdown>
+    </div>
+  );
+};

@@ -10,8 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@clerk/clerk-react": "^5.9.1",
+    "@tatumio/tatum": "^4.2.37",
+    "antd": "^5.20.6",
     "autoprefixer": "^10.4.19",
     "dropzone": "^6.0.0-beta.2",
+    "ethers": "^6.13.2",
     "framer-motion": "^11.1.7",
     "postcss": "^8.4.38",
     "postcss-cli": "^11.0.0",
