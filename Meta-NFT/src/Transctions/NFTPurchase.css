@@ -1,0 +1,103 @@
+/* Use specific class names to scope styles within NFTPurchase component */
+
+.nft-purchase-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure this section doesn't overlap with other components */
+  padding: 30px;
+  text-align: center;
+  background: black;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  margin: 0 auto; /* Center horizontally */
+  max-width: 1200px; /* Max width to prevent overflow */
+  width: 100%;
+}
+
+.nft-purchase-container h2 {
+  font-size: 3rem;
+  color: #00ffcc;
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
+  margin-bottom: 40px;
+}
+
+.nft-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.nft-item {
+  background: #141e30;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 250px; /* Responsive width */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nft-item.selected {
+  border: 2px solid #00ffcc;
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 255, 204, 0.6);
+}
+
+.nft-item img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.nft-item img:hover {
+  transform: scale(1.1);
+}
+
+.nft-item h3 {
+  color: #00ffcc;
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.nft-item p {
+  color: #b3b3b3;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.nft-item button {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  color: #ffffff;
+  background: linear-gradient(90deg, #1e90ff, #00bfff);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+}
+
+.nft-item button:hover {
+  background: linear-gradient(90deg, #00bfff, #1e90ff);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.6);
+}
+
+.nft-item button:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+.nftPurchaseContainer {
+  padding: 20px;
+  margin: 20px 0;
+  border-bottom: 1px solid #eaeaea; /* Optional separator */
+  width: 100%; /* Ensure it fits within the container */
+}
+
+/* Avoid global styles on body and html */

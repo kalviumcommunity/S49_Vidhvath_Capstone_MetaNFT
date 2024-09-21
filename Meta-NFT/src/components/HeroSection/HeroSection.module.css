@@ -1,43 +1,80 @@
-/* HeroSection.module.css */
-
 .HeroSection {
-    background-color: #1c1c1c;
-    color: #ffffff;
-    padding: 8rem 0;
-  }
-  
-  .heroSection_box {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .heroSection_box_left {
-    flex: 1;
-    padding-right: 4rem;
-  }
-  
-  .heroSection_box_right {
-    flex: 1;
-  }
-  
-  .heroSection_box h1 {
-    font-size: 3.5rem;
-    line-height: 1.2;
-    margin-bottom: 2rem;
-  }
-  
-  .heroSection_box p {
-    font-size: 1.6rem;
-    line-height: 1.6;
-    margin-bottom: 3rem;
-  }
-  
-  .heroSection_box_right img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-  
+  background-color: #121212; /* Dark background for a sleek look */
+  color: #ffffff;
+  padding: 8rem 0;
+  position: relative;
+  overflow: hidden; /* To contain any overflow effects */
+}
+
+.heroSection_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 1; /* Ensure content is above any background effects */
+}
+
+.heroSection_box_left {
+  flex: 1;
+  padding-right: 4rem;
+}
+
+.heroSection_box_right {
+  flex: 1;
+  position: relative; /* For image effects */
+}
+
+.heroSection_box h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #ff007a, #ffb900);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroSection_box p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  opacity: 0.85; /* Slightly faded for a softer look */
+}
+
+.heroSection_box_right img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease; /* Smooth scale effect on hover */
+}
+
+.heroSection_box_right img:hover {
+  transform: scale(1.05); /* Slightly zoom in on hover */
+}
+
+/* Add a background effect */
+.heroSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, rgba(255, 0, 122, 0.1), rgba(255, 0, 122, 0.1) 50%, rgba(0, 0, 0, 0.8) 70%);
+  z-index: 0; /* Keep it behind the content */
+}
+
+.button {
+  background-color: #ff007a; /* Button color */
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ffb900; /* Change button color on hover */
+}

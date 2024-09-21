@@ -1,0 +1,83 @@
+/* TransactionSuccess.css */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .transaction-success-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: radial-gradient(circle at top, #141e30, #243b55); /* Futuristic gradient */
+    color: #ffffff; /* Bright white text */
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+  }
+  
+  .transaction-success-container h1 {
+    font-size: 3rem;
+    color: #00ffcc; /* Neon green color */
+    margin-bottom: 20px;
+    animation: pulse 2s infinite ease-in-out;
+  }
+  
+  .transaction-success-container p {
+    font-size: 1.2rem;
+    color: #b3b3b3; /* Subtle light gray text */
+    margin: 10px 0;
+  }
+  
+  .strong {
+    color: #fff; /* Make strong elements stand out */
+  }
+  
+  .etherscan-link {
+    display: inline-block;
+    background: #ff4ecd; /* Web3 inspired gradient */
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+    box-shadow: 0px 4px 15px rgba(255, 78, 205, 0.4);
+  }
+  
+  .etherscan-link:hover {
+    background: #ff77e1; /* Slight color change on hover */
+  }
+  
+  button {
+    margin-top: 30px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    background: #1e90ff; /* Neon blue */
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0px 4px 15px rgba(30, 144, 255, 0.4);
+  }
+  
+  button:hover {
+    background: #00bfff; /* Lighter blue on hover */
+  }
+  
+  @keyframes pulse {
+    0% {
+      text-shadow: 0 0 15px #00ffcc, 0 0 30px #00ffcc, 0 0 45px #00ffcc;
+    }
+    100% {
+      text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 15px #00ffcc;
+    }
+  }
+  

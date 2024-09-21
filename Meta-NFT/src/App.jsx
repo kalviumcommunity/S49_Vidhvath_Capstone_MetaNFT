@@ -15,7 +15,8 @@ import Account from './Pages/Account';
 import UploadNFT from './Pages/UploadNFT'
 import AboutUs from './Pages/AboutUs';
 import SubscriptionPage from './Pages/SubscriptionPage';
-
+import NFTPurchase from './Transctions/NFTPurchase';
+import TransactionSuccess from './Transctions/TransactionSuccess';
 
 
 
@@ -36,14 +37,8 @@ const MyApp =() => {
       <Route path="/ContactUs" element={<ContactUs/>}/>
       <Route path="/AboutUs" element={<AboutUs/>}/>
       <Route path="/SubscriptionPage" element={<SubscriptionPage/>} />
-     
-      
-      
-
-      
-
-    
-
+      <Route path="/NFTPurchase" element={<NFTPurchase />} />
+      <Route path="/payment-status/success" element={<TransactionSuccess />} />
     </Routes>
    
    </div>

@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { AiFillFire, AiFillHeart } from 'react-icons/ai';
 import { MdVerified, MdTimer } from 'react-icons/md';
 import { TbArrowBigLeftLines, TbArrowBigRightLine } from 'react-icons/tb';
@@ -35,6 +35,8 @@ const Modal = ({ isOpen, onClose, title, bidDetails }) => {
 function BigNFTSlider() {
   const [idNumber, setIdNumber] = useState(0);
   const [modalOpen, setModalOpen] = useState(false);
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+
   const sliderData = [
     {
       title: "Hello NFT",
@@ -102,6 +104,11 @@ function BigNFTSlider() {
     }
   ];
 
+  // Update the timeLeft based on selected NFT
+  useEffect(() => {
+    setTimeLeft(sliderData[idNumber].time);
+  }, [idNumber]);
+
   // Increment Function
   const inc = useCallback(() => {
     if (idNumber + 1 < sliderData.length) {
@@ -115,6 +122,30 @@ function BigNFTSlider() {
       setIdNumber(idNumber - 1);
     }
   }, [idNumber]);
+
+  // Countdown timer logic
+  useEffect(() => {
+    const countdown = setInterval(() => {
+      setTimeLeft((prevTime) => {
+        const { days, hours, minutes, seconds } = prevTime;
+        if (seconds > 0) {
+          return { ...prevTime, seconds: seconds - 1 };
+        }
+        if (minutes > 0) {
+          return { ...prevTime, minutes: minutes - 1, seconds: 59 };
+        }
+        if (hours > 0) {
+          return { ...prevTime, hours: hours - 1, minutes: 59, seconds: 59 };
+        }
+        if (days > 0) {
+          return { ...prevTime, days: days - 1, hours: 23, minutes: 59, seconds: 59 };
+        }
+        return prevTime; // Timer has ended
+      });
+    }, 1000);
+
+    return () => clearInterval(countdown);
+  }, [timeLeft]);
 
   // Handle Place Button Click
   const handlePlaceClick = () => {
@@ -158,19 +189,19 @@ function BigNFTSlider() {
             </p>
             <div className={Style.bigNFTSlider_box_left_bidding_box_timer}>
               <div>
-                <p>{sliderData[idNumber].time.days}</p>
+                <p>{timeLeft.days}</p>
                 <span>Days</span>
               </div>
               <div>
-                <p>{sliderData[idNumber].time.hours}</p>
+                <p>{timeLeft.hours}</p>
                 <span>Hours</span>
               </div>
               <div>
-                <p>{sliderData[idNumber].time.minutes}</p>
+                <p>{timeLeft.minutes}</p>
                 <span>mins</span>
               </div>
               <div>
-                <p>{sliderData[idNumber].time.seconds}</p>
+                <p>{timeLeft.seconds}</p>
                 <span>secs</span>
               </div>
             </div>
