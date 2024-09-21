@@ -1,82 +1,100 @@
-/* Subscribe.module.css */
-
 .subscribe {
-  background-color: #0d0d0d; /* Dark background */
-  color: #fff; /* White text for contrast */
-  padding: 80px 20px; /* Padding around the content */
-  text-align: center; /* Center-align text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #3f4c6b);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  color: white;
 }
 
 .subscribe_box {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 100%;
   max-width: 1200px;
-  margin: 0 auto; /* Center align the box */
+  margin: 0 auto;
 }
 
 .subscribe_box_left {
   flex: 1;
-  text-align: left;
+  padding: 1.5rem;
 }
 
 .subscribe_box_left h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 
 .subscribe_box_left p {
-  font-size: 1.5rem;
-  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 1rem;
 }
 
 .subscribe_box_left_box {
-  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.subscribe_box_left_box div {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
 }
 
 .subscribe_box_left_box span {
-  display: inline-block;
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.subscribe_box_left_box small {
-  font-size: 1.5rem;
-  line-height: 1.6;
-  display: block;
+  background: #00bfff;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  font-weight: bold;
 }
 
 .subscribe_box_left_input {
   display: flex;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 1rem;
 }
 
 .subscribe_box_left_input input {
   flex: 1;
-  height: 50px;
-  padding: 10px;
-  border: 1px solid #ccc;
+  padding: 0.75rem;
+  border: none;
   border-radius: 5px;
-  font-size: 1.5rem;
+  outline: none;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.subscribe_box_left_input_icon {
-  font-size: 2rem;
-  margin-left: -45px;
+.subscribe_box_left_input_button {
+  background: ;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.75rem 1rem;
   cursor: pointer;
-  color: #fff;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.subscribe_box_left_input_button:hover {
+  background: #c70039;
 }
 
 .subscribe_box_right {
   flex: 1;
-  text-align: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
 
 .subscribe_box_right img {
   max-width: 100%;
-  height: auto;
-  border-radius: 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
