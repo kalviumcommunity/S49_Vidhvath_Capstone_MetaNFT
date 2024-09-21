@@ -214,4 +214,13 @@
     margin-top: 10px;
   }
   
+  .bigNFTSlider_box_left_bidding_box_timer {
+    display: flex;
+    justify-content: space-between; /* Distribute space between items */
+  }
+  
+  .bigNFTSlider_box_left_bidding_box_timer > div {
+    margin: 0 10px; /* Add horizontal spacing */
+    text-align: center; /* Center-align the text */
+  }
   
