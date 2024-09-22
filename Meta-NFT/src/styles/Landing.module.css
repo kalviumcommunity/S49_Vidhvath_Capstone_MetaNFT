@@ -56,4 +56,83 @@
     padding: 2rem 0;
     text-align: center;
   }
-  
+  /* Landing.module.css */
+
+/* General Styling for Titles */
+.title {
+  font-family: 'Orbitron', sans-serif; /* Web3 style futuristic font */
+  color: #00ffcc; /* Neon blue-green color */
+  font-size: 2.5rem;
+  text-align: center;
+  position: relative;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  animation: glow 1.5s ease-in-out infinite alternate;
+  z-index: 1;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+}
+
+.subtitle {
+  color: #999; /* Muted subtitle color */
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Adding a neon glow effect */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc, 0 0 50px #00ffcc;
+  }
+  to {
+    text-shadow: 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc, 0 0 50px #00ffcc, 0 0 60px #00ffcc;
+  }
+}
+
+/* Underline Animation on Hover */
+.title:hover {
+  color: #ffffff;
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #ff007a, #00ffcc);
+  transition: width 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.title:hover::before {
+  width: 100%;
+}
+
+/* Background glow effect */
+.title::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 150%;
+  background: radial-gradient(circle, rgba(0, 255, 204, 0.3), transparent 70%);
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.title:hover::after {
+  opacity: 0.8;
+}

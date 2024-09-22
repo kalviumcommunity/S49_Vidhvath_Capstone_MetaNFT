@@ -3,29 +3,28 @@ import { FaFilter, FaAngleDown, FaAngleUp, FaWallet, FaMusic, FaVideo, FaImages,
 import { AiFillCloseCircle } from 'react-icons/ai';
 import { MdVerified } from 'react-icons/md';
 import { TiTick } from 'react-icons/ti';
-// INTERNAL IMPORTS
 import Style from './Filter.module.css';
 
 const Filter = () => {
-    const [filter, setFilter] = useState(true);
-    const [image, setImage] = useState(true);
-    const [video, setVideo] = useState(true);
-    const [music, setMusic] = useState(true);
+    const [filter, setFilter] = useState(false);  // Start with filter closed
+    const [image, setImage] = useState(false);
+    const [video, setVideo] = useState(false);
+    const [music, setMusic] = useState(false);
 
-    // FUNCTION SECTION
+    // Toggle filter options
     const openFilter = () => {
         setFilter(!filter);
     };
 
-    const openImage = () => {
+    const toggleImage = () => {
         setImage(!image);
     };
 
-    const openVideo = () => {
+    const toggleVideo = () => {
         setVideo(!video);
     };
 
-    const openMusic = () => {
+    const toggleMusic = () => {
         setMusic(!music);
     };
 
@@ -33,19 +32,20 @@ const Filter = () => {
         <div className={Style.filter}>
             <div className={Style.filter_box}>
                 <div className={Style.filter_box_left}>
-                    <button onClick={() => {}}>NFTs</button>
-                    <button onClick={() => {}}>Arts</button>
-                    <button onClick={() => {}}>Musics</button>
-                    <button onClick={() => {}}>Sports</button>
-                    <button onClick={() => {}}>Photography</button>
+                    <button>NFTs</button>
+                    <button>Arts</button>
+                    <button>Music</button>
+                    <button>Sports</button>
+                    <button>Photography</button>
                 </div>
                 <div className={Style.filter_box_right}>
                     <div className={Style.filter_box_right_box} onClick={openFilter}>
                         <FaFilter />
-                        <span>Filter</span> {filter ? <FaAngleDown /> : <FaAngleUp />}
+                        <span>Filter</span> {filter ? <FaAngleUp /> : <FaAngleDown />}
                     </div>
                 </div>
             </div>
+
             {filter && (
                 <div className={Style.filter_box_items}>
                     <div className={Style.filter_box_items_box_items}>
@@ -54,27 +54,31 @@ const Filter = () => {
                             <AiFillCloseCircle />
                         </div>
                     </div>
-                    <div className={Style.filter_box_items_box}>
-                        <div className={Style.filter_box_items_box_item_trans} onClick={openImage}>
+
+                    <div className={Style.filter_box_items_box} onClick={toggleImage}>
+                        <div className={Style.filter_box_items_box_item_trans}>
                             <FaImages /> <small>Images</small>
                             {image ? <TiTick /> : <AiFillCloseCircle />}
                         </div>
                     </div>
-                    <div className={Style.filter_box_items_box}>
-                        <div className={Style.filter_box_items_box_item_trans} onClick={openVideo}>
+
+                    <div className={Style.filter_box_items_box} onClick={toggleVideo}>
+                        <div className={Style.filter_box_items_box_item_trans}>
                             <FaVideo /> <small>Videos</small>
                             {video ? <TiTick /> : <AiFillCloseCircle />}
                         </div>
                     </div>
-                    <div className={Style.filter_box_items_box}>
-                        <div className={Style.filter_box_items_box_item_trans} onClick={openMusic}>
-                            <FaMusic /> <small>Musics</small>
+
+                    <div className={Style.filter_box_items_box} onClick={toggleMusic}>
+                        <div className={Style.filter_box_items_box_item_trans}>
+                            <FaMusic /> <small>Music</small>
                             {music ? <TiTick /> : <AiFillCloseCircle />}
                         </div>
                     </div>
+
                     <div className={Style.filter_box_items_box}>
-                        <div className={Style.filter_box_items_box_item}>
-                            <FaUserAlt /> <span>Verified</span>
+                        <div className={Style.filter_box_items_box_item_trans}>
+                            <FaUserAlt /> <small>Verified</small>
                             <MdVerified />
                         </div>
                     </div>

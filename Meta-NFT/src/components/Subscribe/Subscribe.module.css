@@ -70,7 +70,7 @@
 }
 
 .subscribe_box_left_input_button {
-  background: ;
+  background: #ff5733; /* Added missing background color */
   color: white;
   border: none;
   border-radius: 5px;
