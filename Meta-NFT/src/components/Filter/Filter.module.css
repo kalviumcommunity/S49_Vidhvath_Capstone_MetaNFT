@@ -1,153 +1,96 @@
 /* Filter.module.css */
-
 .filter {
-  width: 100%;
+  background-color: #0e0e0e; /* Dark background for Web3 feel */
   padding: 20px;
-  background: linear-gradient(145deg, #141414, #2c2c2c); /* Dark gradient background */
-  color: #e5e5e5; /* Light text for contrast */
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+  max-width: 800px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
 }
 
 .filter_box {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .filter_box_left button {
-  background: #007bff; /* Button background color */
-  color: #ffffff; /* Button text color */
+  background: none;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin-right: 10px;
+  color: #00ffcc;
+  font-size: 1.1rem;
   cursor: pointer;
-  font-size: 1rem;
-  transition: background 0.3s ease;
+  margin-right: 10px;
+  transition: color 0.2s ease;
 }
 
 .filter_box_left button:hover {
-  background: #0056b3;
-}
-
-.filter_box_right {
-  display: flex;
-  align-items: center;
+  color: #ffffff; /* Hover effect */
 }
 
 .filter_box_right_box {
   display: flex;
   align-items: center;
   cursor: pointer;
-  padding: 10px;
-  border-radius: 5px;
-  transition: background 0.3s ease;
+  font-size: 1.2rem;
+  color: #00ffcc;
+  transition: color 0.2s ease;
 }
 
 .filter_box_right_box:hover {
-  background: #333;
-}
-
-.filter_box_right_box span {
-  margin-left: 5px;
-  font-size: 1rem;
+  color: #ffffff;
 }
 
 .filter_box_items {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 10px;
-  background: #1c1c1e; /* Slightly lighter background for items */
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 10px;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
+.filter_box_items_box_items,
 .filter_box_items_box {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  border-bottom: 1px solid #333;
-}
-
-.filter_box_items_box:last-child {
-  border-bottom: none;
-}
-
-.filter_box_items_box_item,
-.filter_box_items_box_item_trans {
+  background-color: #1a1a1a;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 5px;
   display: flex;
   align-items: center;
   cursor: pointer;
-  transition: color 0.3s ease, background 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.2);
 }
 
-.filter_box_items_box_item:hover,
-.filter_box_items_box_item_trans:hover {
-  background: #333;
+.filter_box_items_box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
 }
 
-.filter_box_items_box_item span,
-.filter_box_items_box_item small {
-  margin-left: 10px;
-  font-size: 1rem;
+.filter_box_items_box_item_trans {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: #00ffcc;
 }
 
 .filter_box_items_box_item_trans small {
-  font-size: 0.9rem;
+  margin-left: 10px;
 }
 
-.filter_box_items_box_item svg,
-.filter_box_items_box_item_trans svg {
-  margin-right: 10px;
+.filter_box_items_box_item_trans:hover {
+  color: #ffffff;
 }
 
-@media (max-width: 768px) {
-  .filter {
-    padding: 10px;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
   }
-
-  .filter_box {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .filter_box_left {
-    margin-bottom: 10px;
-  }
-
-  .filter_box_left button {
-    margin-right: 0;
-    margin-bottom: 10px;
-    width: 100%;
-  }
-
-  .filter_box_right_box {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .filter_box_items {
-    padding: 5px;
-  }
-
-  .filter_box_items_box {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .filter_box_items_box_item,
-  .filter_box_items_box_item_trans {
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .filter_box_items_box_item span,
-  .filter_box_items_box_item small {
-    margin-left: 5px;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
