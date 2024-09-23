@@ -1,59 +1,51 @@
 import React, { useState } from 'react';
-import { MdVerified } from 'react-icons/md';
+import { FaTwitter, FaDiscord } from 'react-icons/fa';
 import { TiTick } from 'react-icons/ti';
 import Style from './FollowerTabCard.module.css';
-import images from '../../../img';
 
-const FollowerTabCard = ({ index }) => {
-  const [following, setFollowing] = useState(false);
+const FollowerTabCard = ({ el, i }) => {
+  const [isFollowing, setIsFollowing] = useState(false);
 
-  const followMe = () => {
-    setFollowing(prevFollowing => !prevFollowing);
+  const toggleFollow = () => {
+    setIsFollowing(!isFollowing);
   };
 
   return (
-    <div className={Style.FollowerTabCard}>
-      <div className={Style.FollowerTabCard_rank}>
-        <p>
-          #{index + 1} <span>🥇</span>
-        </p>
+    <div className={Style.card}>
+      {/* Rank badge */}
+      <div className={Style.rankBadge}>
+        <span>#{i + 1}</span>
       </div>
 
-      <div className={Style.FollowerTabCard_box}>
-        <div className={Style.FollowerTabCard_box_img}>
-          <img
-            className="Style.FollowerTabCard_box_img_img"
-            src={images.creatorbackground1}
-            alt="profile background"
-            width={500}
-            height={300}
-          />
-        </div>
-        <div className={Style.FollowerTabCard_box_profile}>
-          <img
-            src={images.user1}
-            className={Style.FollowerTabCard_box_profile_img}
-            alt="profile picture"
-            width={50}
-            height={50}
-          />
-        </div>
-        <div className={Style.FollowerTabCard_box_info}>
-          <div className={Style.FollowerTabCard_box_info_name}>
-            <h4>
-              Spider Man <span>MdVerified</span>
-            </h4>
-            <p>12.321 ETH</p>
-          </div>
-          <div className={Style.FollowerTabCard_box_info_following}>
-            {following ? (
-              <a onClick={followMe}>
-                Follow <span><TiTick /></span>
-              </a>
-            ) : (
-              <a onClick={followMe}>Following</a>
-            )}
-          </div>
+      {/* Background image */}
+      <img src={el.backgroundImg} alt="Background" className={Style.backgroundImg} />
+
+      {/* Profile picture */}
+      <img src={el.profilePic} alt={el.name} className={Style.profilePic} />
+
+      {/* Info section */}
+      <div className={Style.info}>
+        {/* Earnings */}
+        <p className={`${Style.earnings} ${Style.animatedEarnings}`}>
+          {el.earnings}
+        </p>
+
+        {/* Creator Name */}
+        <h3>{el.name} <TiTick className={Style.verifiedIcon} /></h3>
+
+        {/* Follow/Unfollow Button */}
+        <button className={`${Style.followBtn} ${isFollowing ? Style.following : ''}`} onClick={toggleFollow}>
+          {isFollowing ? 'Following' : 'Follow'}
+        </button>
+
+        {/* Social Media Links */}
+        <div className={Style.socialLinks}>
+          <a href={`https://twitter.com/${el.twitter}`} target="_blank" rel="noopener noreferrer">
+            <FaTwitter />
+          </a>
+          <a href={`https://discord.com/${el.discord}`} target="_blank" rel="noopener noreferrer">
+            <FaDiscord />
+          </a>
         </div>
       </div>
     </div>

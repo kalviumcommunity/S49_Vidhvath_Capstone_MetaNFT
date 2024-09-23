@@ -1,89 +1,44 @@
-/* Slider.module.css */
-
 .slider {
-  padding: 2rem;
-  background-color: #121212;
-  color: #fff;
-  position: relative;
-  overflow: hidden;
+  padding: 20px;
+  background: linear-gradient(135deg, #1a1a1a, #3c3c3c);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .slider_box {
-  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.slider_box h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  text-align: center;
+  position: relative;
 }
 
 .slider_box_button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
-}
-
-.slider_box_button p {
-  font-size: 1rem;
-  color: #999;
+  margin-bottom: 15px;
 }
 
 .slider_box_button_btn {
   display: flex;
-  gap: 1rem;
 }
 
 .slider_box_button_btn_icon {
-  width: 40px;
-  height: 40px;
-  background-color: #1abc9c;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 30px;
+  color: #fff;
+  margin: 0 10px;
+  transition: color 0.3s;
 }
 
 .slider_box_button_btn_icon:hover {
-  background-color: #16a085;
+  color: #ff4081;
 }
 
 .slider_box_items {
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .slider_box_item {
   display: flex;
-  gap: 1rem;
-  cursor: grab;
-}
-
-.slider_box_item:active {
-  cursor: grabbing;
-}
-
-.slider_item {
-  min-width: 300px;
-  min-height: 200px;
-  background-color: #1e1e1e;
-  border-radius: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.slider_item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  gap: 20px;
 }
