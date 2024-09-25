@@ -1,79 +1,47 @@
-import React, { useState } from 'react';
-import { BsImages } from 'react-icons/bs';
-import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
-import { TiArrowSortedDown, TiArrowSortedUp } from 'react-icons/ti';
-import Style from './NFTDetailimg.module.css';
-import images from '../../img';
+import React from 'react';
+import NFTDetailsimg from './NFTDetailsimg'; // Adjust the import path accordingly
 
-const NFTDetailsimg = () => {
-  const [description, setDescription] = useState(true);
-  const [details, setDetails] = useState(true);
-  const [like, setLike] = useState(false);
-
-  const openDescription = () => {
-    setDescription(!description);
-  };
-
-  const openDetails = () => {
-    setDetails(!details);
-  };
-
-  const likeNFT = () => {
-    setLike(!like);
-  };
+const App = () => {
+  const nftData = [
+    {
+      title: 'MetaNFT #1',
+      image: 'path/to/nft_image_1.jpg', // Replace with actual image path
+      description: 'Its Time for MetaNFT #1',
+      dimension: '2000 X 2000 px',
+      size: '685KB',
+      contactAddress: '0xdaffanjkbrafman425439ssnf',
+      tokenId: '10003000372864',
+      likes: 23,
+    },
+    {
+      title: 'MetaNFT #2',
+      image: 'path/to/nft_image_2.jpg', // Replace with actual image path
+      description: 'Its Time for MetaNFT #2',
+      dimension: '2048 X 2048 px',
+      size: '700KB',
+      contactAddress: '0xdaffanjkbrafman425439ssnf',
+      tokenId: '10003000372865',
+      likes: 15,
+    },
+    {
+      title: 'MetaNFT #3',
+      image: 'path/to/nft_image_3.jpg', // Replace with actual image path
+      description: 'Its Time for MetaNFT #3',
+      dimension: '1920 X 1080 px',
+      size: '650KB',
+      contactAddress: '0xdaffanjkbrafman425439ssnf',
+      tokenId: '10003000372866',
+      likes: 10,
+    },
+  ];
 
   return (
-    <div className={Style.NFTDetailsImg}>
-      <div className={Style.NFTDetailsImg_box}>
-        <div className={Style.NFTDetailsImg_box_NFT}>
-          <div className={Style.NFTDetailsImg_box_NFT_like}>
-            <BsImages className={Style.NFTDetailsImg_box_NFT_like_icon} />
-            <p onClick={likeNFT}>
-              {like ? (
-                <AiFillHeart className={Style.NFTDetailsImg_box_NFT_like_icon} />
-              ) : (
-                <AiOutlineHeart className={Style.NFTDetailsImg_box_NFT_like_icon} />
-              )}
-              <span>23</span>
-            </p>
-          </div>
-          <div className={Style.NFTDetailsImg_box_NFT_img}>
-            <img src={images.nft_image_1} className={Style.NFTDetailsImg_box_NFT_img_img} alt="NFT image" width={700} height={800} />
-          </div>
-        </div>
-        <div className={Style.NFTDetailsImg_box_description} onClick={openDescription}>
-          <p>Description</p>
-          {description ? <TiArrowSortedUp /> : <TiArrowSortedDown />}
-        </div>
-
-        {description && (
-          <div className={Style.NFTDetailsImg_box_description_box}>
-            <p>Its Time for MetaNFT</p>
-          </div>
-        )}
-
-        <div className={Style.NFTDetailsImg_box_details} onClick={openDetails}>
-          <p>Details</p>
-          {details ? <TiArrowSortedUp /> : <TiArrowSortedDown />}
-        </div>
-
-        {details && (
-          <div className={Style.NFTDetailsImg_box_details_box}>
-            <small>2000 X 20000 px.IMAGE(685KB)</small>
-            <p>
-              <small>Contact Address</small>
-              <br></br>
-              0xdaffanjkbrafman425439ssnf
-            </p>
-            <p>
-              <small>Token ID</small>
-              10003000372864
-            </p>
-          </div>
-        )}
-      </div>
+    <div>
+      {nftData.map((nft, index) => (
+        <NFTDetailsimg key={index} nft={nft} />
+      ))}
     </div>
   );
 };
 
-export default NFTDetailsimg;
+export default App;
