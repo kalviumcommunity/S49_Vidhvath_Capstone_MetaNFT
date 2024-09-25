@@ -1,83 +1,68 @@
-/* ConnectWallet.module.css */
-
 .ConnectWallet {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #121212; /* Dark background */
-    color: #ffffff; /* Light text */
-    font-family: 'Roboto', sans-serif; /* Google Font */
-  }
-  
-  .ConnectWallet_box {
-    max-width: 600px;
-    width: 100%;
-    background-color: #1e1e1e; /* Darker background */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .ConnectWallet_box h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #ffffff; /* Light text */
-  }
-  
-  .ConnectWallet_box_para {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    color: #cccccc; /* Lighter text */
-  }
-  
-  .ConnectWallet_box_provider {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .ConnectWallet_box_provider_item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    background-color: #282828; /* Darker background */
-    border: 2px solid transparent;
-  }
-  
-  .ConnectWallet_box_provider_item:hover,
-  .ConnectWallet_box_provider_item.active {
-    border-color: #29b6af; /* Accent color */
-  }
-  
-  .ConnectWallet_box_provider_item_img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
-  }
-  
-  .ConnectWallet_box_provider_item p {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #ffffff; /* Light text */
-  }
-  
-  @media (max-width: 768px) {
-    .ConnectWallet_box {
-      padding: 20px;
-    }
-    
-    .ConnectWallet_box h1 {
-      font-size: 2em;
-    }
-    
-    .ConnectWallet_box_para {
-      font-size: 1em;
-    }
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgba(40, 44, 52, 1) 0%, rgba(24, 28, 32, 1) 100%);
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+}
+
+.ConnectWallet_box {
+  background-color: rgba(30, 30, 30, 0.9);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+}
+
+.ConnectWallet_box h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.ConnectWallet_box_para {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #b0b0b0;
+}
+
+.ConnectWallet_box_provider {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ConnectWallet_box_provider_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(50, 50, 50, 0.8);
+  padding: 1rem;
+  border-radius: 10px;
+  transition: background 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+.ConnectWallet_box_provider_item:hover {
+  background: rgba(70, 70, 70, 1);
+  transform: scale(1.05);
+}
+
+.ConnectWallet_box_provider_item img {
+  border-radius: 50%;
+}
+
+.ConnectWallet_box_provider_item p {
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.active {
+  background: rgba(85, 85, 255, 0.9);
+  border: 2px solid #fff;
+}

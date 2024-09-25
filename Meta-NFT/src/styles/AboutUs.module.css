@@ -1,26 +1,11 @@
-/* General Styles */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #121212;
-    color: #e0e0e0;
-}
-
-/* About Us Container */
+/* Main Container Styles */
 .aboutus {
-    padding: 40px 20px;
-    background-color: #1e1e1e;
-}
-
-/* About Us Inner Box */
-.aboutus_box {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #232323;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    padding: 4rem 2rem;
+    overflow: hidden;
+    position: relative;
 }
 
 /* Hero Section */
@@ -28,125 +13,156 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 0;
-    border-bottom: 2px solid #444;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
 }
 
-.aboutus_box_hero_left h1 {
-    font-size: 3rem;
-    color: #ffffff;
-    margin-bottom: 10px;
+/* Left Section */
+.aboutus_box_hero_left {
+    flex: 1;
+    padding-right: 2rem;
 }
 
-.aboutus_box_hero_left p {
-    font-size: 1.2rem;
-    color: #bbbbbb;
-    line-height: 1.6;
-}
-
+/* Right Section */
 .aboutus_box_hero_right {
-    /* Add a futuristic image or graphic here */
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
 }
 
-/* Section Titles */
+/* Hero Image */
+.aboutus_box_hero_right_img {
+    width: 100%;
+    border-radius: 12px;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* Hover Effect for Hero Image */
+.aboutus_box_hero_right_img:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+/* Title Styles */
 .aboutus_box_title {
-    margin: 40px 0 20px;
+    margin: 3rem 0 1rem;
     text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
 }
 
-.aboutus_box_title h2 {
-    font-size: 2.5rem;
-    color: #ffffff;
-    margin-bottom: 10px;
-}
-
-.aboutus_box_title p {
-    font-size: 1rem;
-    color: #bbbbbb;
-    line-height: 1.6;
-}
-
-/* Founders Section */
-.aboutus_box_founder, .aboutus_box_facts {
+/* Founder Section */
+.aboutus_box_founder {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-.aboutus_box_founder_box, .aboutus_box_facts_box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+/* Founder Box Styles */
+.aboutus_box_founder_box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
 }
 
+/* Founder Image Container */
 .aboutus_box_founder_box_img {
-    flex: 1 1 250px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 12px;
     text-align: center;
-    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.5s ease forwards;
+    opacity: 0;
 }
 
-.aboutus_box_founder_box_img_img {
-    border-radius: 50%;
-    margin-bottom: 15px;
-    object-fit: cover;
-    border: 3px solid #444;
-    width: 200px;
-    height: 200px;
+/* Fade-in Animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 
-.aboutus_box_founder_box_img h3 {
-    font-size: 1.4rem;
-    color: #ffffff;
-    margin-bottom: 5px;
-}
-
-.aboutus_box_founder_box_img p {
-    font-size: 1rem;
-    color: #bbbbbb;
-}
-
-/* Facts Section */
-.aboutus_box_facts_box_info {
-    flex: 1 1 250px;
-    background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    margin: 20px;
-    transition: transform 0.3s;
-}
-
-.aboutus_box_facts_box_info:hover {
+/* Hover Effect for Founder Box */
+.aboutus_box_founder_box_img:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.3);
 }
 
-.aboutus_box_facts_box_info h3 {
-    font-size: 1.8rem;
-    color: #ffffff;
-    margin-bottom: 10px;
+/* Founder Image Styles */
+.aboutus_box_founder_box_img_img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
-.aboutus_box_facts_box_info p {
-    font-size: 1rem;
-    color: #bbbbbb;
-    line-height: 1.6;
+/* Bio Styles */
+.aboutus_box_founder_bio {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #dddddd;
 }
 
-/* Brand Component */
-.brand {
-    margin-top: 40px;
+/* Fast Facts Section */
+.aboutus_box_facts {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* Facts Box Styles */
+.aboutus_box_facts_box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Fact Info Box */
+.aboutus_box_facts_box_info {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 12px;
     text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: slideIn 0.5s ease forwards;
+    opacity: 0;
 }
 
-.brand img {
-    width: 150px;
-    margin: 0 20px;
-    filter: grayscale(100%);
-    transition: filter 0.3s;
+/* Slide-in Animation for Facts */
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.brand img:hover {
-    filter: grayscale(0%);
+/* Hover Effect for Fact Boxes */
+.aboutus_box_facts_box_info:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Capstone Description Styles */
+.capstoneDescription {
+    font-weight: bold;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+    animation: fadeIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .aboutus_box_hero {
+        flex-direction: column;
+    }
+
+    .aboutus_box_hero_left {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
 }
